@@ -1,0 +1,45 @@
+.navbar {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+
+  li {
+    list-style-type: none;
+  }
+  a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: black;
+      transition: background 1s;
+    }
+  }
+
+  & > ul {
+    display: flex;
+    margin: 0;
+    &.nav-content-box {
+      justify-content: flex-start;
+    }
+    &.nav-icons-box {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.fa {
+  border-radius: 50%;
+}
+
+.social-media-container {
+  display: block;
+}
