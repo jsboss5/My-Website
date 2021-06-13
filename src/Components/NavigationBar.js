@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../css/NavigationBar.css";
+import "../css/NavigationBar.scss";
 
 const NavigationBar = (props) => {
   return (
