@@ -1,0 +1,55 @@
+@import './colors.scss';
+
+.page-container {
+  display: block;
+  height: 1600px;
+  width: 100%;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: flex-end;
+  img {
+    height: 500px;
+    border-radius: 15px;
+  }
+}
+.title-section {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 100px;
+  min-width: 180px;
+  //color: $gray1;
+  h1{
+    font-size: 70px;
+    font-family: "Nunito", sans-serif;
+  }
+  .subtitle{
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    color: $orange1;
+  }
+  p{
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    max-width: 500px;
+    padding-top: 12px;
+  }
+}
+
+.side-profile{
+  img{
+    height: 300px;
+    border-radius: 15px;
+  }
+}
+
+.about-me{
+  font-size: 18px;
+  padding-top: 30px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+}

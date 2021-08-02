@@ -1,4 +1,9 @@
+@import './colors.scss';
+
 * {
   margin: 0;
   padding: 0;
+}
+html {
+  background-color: $light-gray-3;
 }
