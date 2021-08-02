@@ -2,7 +2,7 @@
 
 .page-container {
   display: block;
-  height: 1600px;
+  //height: 1600px;
   width: 100%;
 }
 
@@ -20,16 +20,9 @@
   justify-content: space-evenly;
   padding-top: 100px;
   min-width: 180px;
-  //color: $gray1;
   h1{
     font-size: 70px;
     font-family: "Nunito", sans-serif;
-  }
-  .subtitle{
-    font-size: 40px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 200;
-    color: $orange1;
   }
   p{
     font-family: "Nunito", sans-serif;
@@ -42,14 +35,21 @@
 
 .side-profile{
   img{
-    height: 300px;
+    height: 350px;
     border-radius: 15px;
   }
 }
 
 .about-me{
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 30px;
   font-family: "Nunito", sans-serif;
   font-weight: 200;
+}
+
+.subtitle{
+  font-size: 40px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  color: $orange1;
 }

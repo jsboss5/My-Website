@@ -7,3 +7,11 @@
 html {
   background-color: $light-gray-3;
 }
+
+body{
+  background-image: url(../images/background-bricks-light.svg);
+  // background-image: url(../images/background-bricks-dark.svg);
+  background-size: cover;
+  background-position-y: center;
+  background-attachment: fixed;
+}

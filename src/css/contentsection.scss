@@ -1,10 +1,9 @@
 .content-section {
-    background-color: $light-gray-3;
     color: $gray5;
     padding: 50px 0px;
 
     &.in-view{
-      background-color: $gray4;
+      background-color: $gray5-transparent;
       color: $gray1;
     }
 

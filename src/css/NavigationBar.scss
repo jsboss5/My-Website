@@ -4,6 +4,8 @@
   overflow: hidden;
   padding-top: 20px;
   padding-bottom: 20px;
+  //background-color: $light-gray-3-transparent;
+  background-color: $gray5-transparent;
 }
 
 .container {
@@ -20,7 +22,8 @@
   }
   a {
     display: block;
-    color: $gray6;
+    //color: $gray6;
+    color: $gray1;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -28,7 +31,6 @@
     font-weight: 600;
     font-size: 18px;
     &:hover {
-      //background-color: black;
       color: $orange1;
       transition: 0.5s;
     }

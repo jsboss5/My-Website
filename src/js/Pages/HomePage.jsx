@@ -33,9 +33,9 @@ const HomePage = (props) => {
         columnTwo=
           {
             <div className="title-section">
-              <h1>Hi, I'm Josh</h1>
+              <h1>hi, i'm josh</h1>
               <h2 className="subtitle">
-                Software Engineer
+                software engineer
               </h2>
             </div>
           }
@@ -45,8 +45,11 @@ const HomePage = (props) => {
         columnOne =
           {
             <div className="about-me">
+              <h2 className="subtitle">
+                about me
+              </h2>
               <p className="personal-blurb">
-                ... and I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of societies greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around to learn more about my experience, interests, and goals!
+                I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of societies greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around to learn more about my experience, interests, and goals!
               </p>
             </div>
           }

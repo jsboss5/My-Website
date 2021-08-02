@@ -9,16 +9,16 @@ const NavigationBar = (props) => {
       <div className="container">
         <ul className="nav-content-box">
           <li>
-            <a href="/home">Home</a>
+            <a href="/home">home</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/about">about</a>
           </li>
           <li>
-            <a href="/experience">Experience</a>
+            <a href="/experience">experience</a>
           </li>
           <li>
-            <a href="/contact">Contact Me</a>
+            <a href="/contact">contact me</a>
           </li>
         </ul>
       </div>
