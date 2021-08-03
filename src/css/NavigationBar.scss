@@ -8,7 +8,7 @@
   background-color: $gray5-transparent;
 }
 
-.container {
+.nav-content-box-container {
   display: flex;
   justify-content: flex-end;
   max-width: 1170px;
@@ -22,7 +22,6 @@
   }
   a {
     display: block;
-    //color: $gray6;
     color: $gray1;
     text-align: center;
     padding: 14px 20px;

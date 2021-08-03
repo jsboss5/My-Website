@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
 import NavigationBar from "../Components/NavigationBar";
-import MainPhoto from "../../images/in-the-canyon.jpeg";
+import Footer from  "../Components/Footer";
 import ContentSection from "../Components/ContentSection";
+
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
+import MainPhoto from "../../images/in-the-canyon.jpeg";
+
 import "../../css/main.scss";
 
 const HomePage = (props) => {
   const [isMobile, setIsMobile] = React.useState(false);
-  const [lastViewedSection, setLastViewedSection] = React.useState(null);
 
   //  responsible for change to mobile view
   const onWindowChange = () => {
@@ -60,6 +61,7 @@ const HomePage = (props) => {
           </div>
         }
       />
+      <Footer/>
     </section>
   );
 };

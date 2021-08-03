@@ -6,7 +6,7 @@ const NavigationBar = (props) => {
 
   return (
     <nav className="navbar">
-      <div className="container">
+      <div className="nav-content-box-container">
         <ul className="nav-content-box">
           <li>
             <a href="/home">home</a>

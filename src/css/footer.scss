@@ -1,0 +1,28 @@
+@import './colors.scss';
+
+
+.footer-container{
+    padding: 24px;
+    background-color: $light-gray-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nav-content-box-container{
+        justify-content: center;
+        li {
+            a {
+                color: $gray5;
+                padding: 14px 14px;
+            }
+        }
+    }
+
+    .footer-stamp {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $gray5-transparent;
+    }
+}
