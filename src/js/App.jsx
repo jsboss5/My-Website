@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import HomePage from "../js/Pages/HomePage.jsx";
 import AboutPage from "../js/Pages/AboutPage";
 import NavigationBar from "../js/Components/NavigationBar.jsx";
+import SocialMediaSection from "./Components/SocialMediaSection.jsx";
 import Footer from "../js/Components/Footer";
 import { Route, Switch } from "react-router-dom";
 import { Redirect } from 'react-router'
@@ -21,6 +22,7 @@ export default function App() {
         <Route component={HomePage}  path="/home"/>
         <Route component={AboutPage} path="/about"/>
       </Switch>
+      <SocialMediaSection/>
       <Footer/>
     </div>
   );
