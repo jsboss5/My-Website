@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import ContentSection from "../Components/ContentSection";
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
 import MainPhoto from "../../images/in-the-canyon.jpeg";
+import ButtonComponent from "../Components/ButtonComponent";
 
 
 import "../../css/main.scss";
@@ -13,11 +14,14 @@ const HomePage = (props) => {
   //  responsible for change to mobile view
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 810);
+      setIsMobile(window.innerWidth < 900);
     }, false);
     console.log(isMobile, window.innerWidth);
   };
   React.useEffect(onWindowChange);
+
+  //  when link is clicked it scrolls to top
+  React.useEffect(()=> window.scrollTo(0,0));
 
   return (
     <section className="page-container">
@@ -51,6 +55,10 @@ const HomePage = (props) => {
               <p className="personal-blurb">
                 I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of societies greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around to learn more about my experience, interests, and goals!
               </p>
+              <ButtonComponent
+                text='learn more!'
+                path="/about"
+                />
             </div>
           }
         columnTwo=

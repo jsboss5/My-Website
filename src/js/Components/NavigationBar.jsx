@@ -18,10 +18,10 @@ const NavigationBar = (props) => {
 
           </li>
           <li>
-            <Link to="/experience">interests</Link>
+            <Link to="/interests">interests</Link>
           </li>
           <li>
-            <Link to="/contact">professional experience</Link>
+            <Link to="/experience">professional experience</Link>
           </li>
         </ul>
       </div>

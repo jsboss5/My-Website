@@ -7,11 +7,19 @@
     }
 }
 
+
 .about-me-title{
-    font-size: 200px;
+    font-size: 140px;
     color: $orange1;
 }
 
+.name-header {
+    font-size: 80px;
+    &.mobile{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
 .about-me-content-one-wrapper{
     .about-me-content{
         font-family: "Nunito", sans-serif;
@@ -32,4 +40,11 @@
         height: 500px;
         border-radius: 14px;
     }
+}
+.photo-caption{
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    font-size: 12;
+    padding-top: 8px;
 }

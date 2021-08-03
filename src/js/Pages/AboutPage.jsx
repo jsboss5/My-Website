@@ -16,12 +16,16 @@ const AboutPage = (props) => {
   //  responsible for change to mobile view
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 810);
+      setIsMobile(window.innerWidth < 1000);
     }, false);
     console.log(isMobile, window.innerWidth);
   };
   React.useEffect(onWindowChange);
 
+  const nameMobileClass = isMobile ? 'mobile' : '';
+
+  //  on load it makes sure links to top;
+  React.useEffect(()=> window.scrollTo(0,0));
   return (
     <section className="page-container">
       <ContentSection
@@ -31,6 +35,9 @@ const AboutPage = (props) => {
             <div className="about-me-title-wrapper">
               <h1 className="about-me-title">
                 about me
+              </h1>
+              <h1 className={"name-header " + nameMobileClass}>
+                josh boss
               </h1>
             </div>
           }
@@ -47,6 +54,9 @@ const AboutPage = (props) => {
         {
           <div className="ysanne-photo-wrapper">
             <img src={WithYsanne} alt="side-pic" />
+            <p className="photo-caption">
+              My friend Ysanne and I in front of the Duke Chappel
+            </p>
           </div>
         }
         columnTwo=
@@ -78,7 +88,9 @@ const AboutPage = (props) => {
         {
           <div className="first-day-photo-wrapper">
             <img src={FirstDay} alt="side-pic" />
-            <p>Me on my first day of work at Yext!</p>
+            <p className="photo-caption">
+              Me on my first day of work at Yext!
+            </p>
           </div>
         }
       />
@@ -88,6 +100,9 @@ const AboutPage = (props) => {
         {
           <div className="wake-surf-photo-wrapper">
             <img src={WakeSurf} alt="side-pic" />
+            <p className="photo-caption">
+              Wakesurfing at camp Skylemar where I worked after my Freshman year!
+            </p>
           </div>
         }
         columnTwo=

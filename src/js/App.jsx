@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import HomePage from "../js/Pages/HomePage.jsx";
 import AboutPage from "../js/Pages/AboutPage";
+import InterestsPage from "./Pages/InterestsPage.jsx";
 import NavigationBar from "../js/Components/NavigationBar.jsx";
 import SocialMediaSection from "./Components/SocialMediaSection.jsx";
 import Footer from "../js/Components/Footer";
@@ -21,6 +22,7 @@ export default function App() {
         </Route>
         <Route component={HomePage}  path="/home"/>
         <Route component={AboutPage} path="/about"/>
+        <Route component={InterestsPage} path="/interests"/>
       </Switch>
       <SocialMediaSection/>
       <Footer/>
