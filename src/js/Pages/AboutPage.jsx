@@ -10,7 +10,7 @@ import MainPhoto from "../../images/in-the-canyon.jpeg";
 
 import "../../css/main.scss";
 
-const HomePage = (props) => {
+const AboutPage = (props) => {
   const [isMobile, setIsMobile] = React.useState(false);
 
   //  responsible for change to mobile view
@@ -26,24 +26,6 @@ const HomePage = (props) => {
     <section className="page-container">
       {/* <NavigationBar /> */}
       <ContentSection
-        isMobile = {isMobile}
-        columnOne =
-          {
-            <div className="profile-photo">
-              <img src={MainPhoto} alt="opening-pic" />
-            </div>
-          }
-        columnTwo=
-          {
-            <div className="title-section">
-              <h1>hi, i'm josh</h1>
-              <h2 className="subtitle">
-                software engineer
-              </h2>
-            </div>
-          }
-      />
-      <ContentSection
         isMobile={isMobile}
         columnOne =
           {
@@ -52,7 +34,7 @@ const HomePage = (props) => {
                 about me
               </h2>
               <p className="personal-blurb">
-                I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of societies greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around to learn more about my experience, interests, and goals!
+               This is a new page lets fucking go.
               </p>
             </div>
           }
@@ -89,4 +71,4 @@ const HomePage = (props) => {
   );
 };
 
-export default HomePage;
+export default AboutPage;

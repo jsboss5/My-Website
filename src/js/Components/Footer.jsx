@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {Link} from "react-router-dom";
 import "../../css/main.scss";
 
 export default function Footer(props){
@@ -9,16 +9,16 @@ export default function Footer(props){
             <div className="nav-content-box-container">
                 <ul className="nav-content-box">
                     <li>
-                        <a href="/home">home</a>
+                        <Link to="/home">home</Link>
                     </li>
                     <li>
-                        <a href="/about">about</a>
+                        <Link to="/about">about</Link>
                     </li>
                     <li>
-                        <a href="/experience">experience</a>
+                        <Link to="/experience">experience</Link>
                     </li>
                     <li>
-                        <a href="/contact">contact me</a>
+                        <Link to="/contact">contact me</Link>
                     </li>
                 </ul>
             </div>
