@@ -15,10 +15,10 @@ export default function Footer(props){
                         <Link to="/about">about</Link>
                     </li>
                     <li>
-                        <Link to="/experience">experience</Link>
+                        <Link to="/experience">interests</Link>
                     </li>
                     <li>
-                        <Link to="/contact">contact me</Link>
+                        <Link to="/contact">professional experience</Link>
                     </li>
                 </ul>
             </div>
