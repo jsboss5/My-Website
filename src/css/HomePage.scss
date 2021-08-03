@@ -65,7 +65,9 @@
 .social-media-section{
   display: flex;
   justify-content: center;
+  //align-items: center;
   background-color: $gray5-transparent;
+  height: 120px;
   color: $light-gray-3;
   li{
     list-style-type: none;

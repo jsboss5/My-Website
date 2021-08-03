@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import NavigationBar from "../Components/NavigationBar";
 import Footer from  "../Components/Footer";
 import ContentSection from "../Components/ContentSection";
+import { SocialIcon } from 'react-social-icons';
 
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
 import MainPhoto from "../../images/in-the-canyon.jpeg";
+
 
 import "../../css/main.scss";
 
@@ -64,13 +66,22 @@ const HomePage = (props) => {
       <section className="social-media-section">
         <ul className="nav-content-box">
           <li>
-            LinkedIn
+            <SocialIcon
+              url="https://www.linkedin.com/in/joshua-boss/"
+              bgColor="#e2eaec"
+              />
           </li>
           <li>
-            Github
+            <SocialIcon
+              url="https://github.com/jsboss5"
+              bgColor="#e2eaec"
+            />
           </li>
           <li>
-            email
+          <SocialIcon
+            url="mailto: joshua.boss@duke.edu"
+            bgColor="#e2eaec"
+            />
           </li>
         </ul>
       </section>
