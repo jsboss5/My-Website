@@ -21,6 +21,7 @@
   padding-top: 100px;
   min-width: 180px;
   h1{
+    padding-top: 80px;
     font-size: 70px;
     font-family: "Nunito", sans-serif;
   }
@@ -34,6 +35,10 @@
 }
 
 .side-profile{
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   img{
     height: 350px;
     border-radius: 15px;
@@ -53,4 +58,20 @@
   font-family: "Nunito", sans-serif;
   font-weight: 200;
   color: $orange1;
+}
+
+.social-media-section{
+  display: flex;
+  justify-content: center;
+  background-color: $gray5-transparent;
+  color: $light-gray-3;
+  li{
+    list-style-type: none;
+    padding: 16px 16px;
+  }
+  ul{
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+  }
 }

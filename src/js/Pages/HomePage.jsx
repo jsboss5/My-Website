@@ -61,6 +61,19 @@ const HomePage = (props) => {
           </div>
         }
       />
+      <section className="social-media-section">
+        <ul className="nav-content-box">
+          <li>
+            LinkedIn
+          </li>
+          <li>
+            Github
+          </li>
+          <li>
+            email
+          </li>
+        </ul>
+      </section>
       <Footer/>
     </section>
   );

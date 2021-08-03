@@ -24,12 +24,8 @@ export default function ContentSection ({
             className={"content-section " + inViewCss}
             ref={ref}>
             <div className={"main-section-container " + mobileCss}>
-                <div className="column-one">
                     {columnOne}
-                </div>
-                <div className="column-two">
                     {columnTwo}
-                </div>
             </div>
         </section>
     );
