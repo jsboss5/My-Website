@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import HomePage from "../js/Pages/HomePage.jsx";
 import AboutPage from "../js/Pages/AboutPage";
 import InterestsPage from "./Pages/InterestsPage.jsx";
@@ -20,9 +19,9 @@ export default function App() {
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
-        <Route component={HomePage}  path="/home"/>
-        <Route component={AboutPage} path="/about"/>
-        <Route component={InterestsPage} path="/interests"/>
+        <Route render={()=><HomePage/>}  path="/home"/>
+        <Route render={()=><AboutPage/>} path="/about"/>
+        <Route render={()=><InterestsPage/>} path="/interests"/>
       </Switch>
       <SocialMediaSection/>
       <Footer/>

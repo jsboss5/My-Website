@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContentSection from "../Components/ContentSection";
 
 import WithYsanne from "../../images/with-ysanne.jpg";
@@ -13,19 +13,31 @@ import "../../css/main.scss";
 const AboutPage = (props) => {
   const [isMobile, setIsMobile] = React.useState(false);
 
+  const MOBILE_THRESH = 1000;
+
+  //  makes sure component is mounted before changing state.
+  const componentIsMounted = React.useRef(true)
+  React.useEffect(() => {
+      return () => {
+          componentIsMounted.current = false
+      }
+  }, []);
   //  responsible for change to mobile view
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 1000);
+      if(componentIsMounted.current){
+        setIsMobile(window.innerWidth < MOBILE_THRESH);
+      }
     }, false);
-    console.log(isMobile, window.innerWidth);
   };
-  React.useEffect(onWindowChange);
+  React.useEffect(onWindowChange, []);
 
   const nameMobileClass = isMobile ? 'mobile' : '';
 
-  //  on load it makes sure links to top;
-  React.useEffect(()=> window.scrollTo(0,0));
+  //  on load it makes sure links to top and resizes if necessary;
+  React.useEffect(()=> window.scrollTo(0,0), []);
+  React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+
   return (
     <section className="page-container">
       <ContentSection

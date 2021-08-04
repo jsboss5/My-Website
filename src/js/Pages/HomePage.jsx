@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import ContentSection from "../Components/ContentSection";
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
@@ -10,18 +10,30 @@ import "../../css/main.scss";
 
 const HomePage = (props) => {
   const [isMobile, setIsMobile] = React.useState(false);
+  const MOBILE_THRESH = 900;
+
+  //  makes sure component is mounted before changing state.
+  const componentIsMounted = React.useRef(true)
+    React.useEffect(() => {
+        return () => {
+            componentIsMounted.current = false
+        }
+    }, []);
 
   //  responsible for change to mobile view
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 900);
+      if(componentIsMounted.current){
+        setIsMobile(window.innerWidth < MOBILE_THRESH);
+      }
     }, false);
-    console.log(isMobile, window.innerWidth);
   };
-  React.useEffect(onWindowChange);
+  React.useEffect(onWindowChange, []);
 
-  //  when link is clicked it scrolls to top
-  React.useEffect(()=> window.scrollTo(0,0));
+  //  when link is clicked it scrolls to top and resizes if necessary
+  React.useEffect(()=> window.scrollTo(0,0), []);
+  React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+
 
   return (
     <section className="page-container">
