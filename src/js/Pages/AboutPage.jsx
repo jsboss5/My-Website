@@ -1,5 +1,6 @@
 import React from "react";
 import ContentSection from "../Components/ContentSection";
+import ButtonComponent from "../Components/ButtonComponent";
 
 import WithYsanne from "../../images/with-ysanne.jpg";
 import FirstDay from "../../images/first-day-of-work.jpg";
@@ -124,6 +125,10 @@ const AboutPage = (props) => {
               <p className="about-me-content">
                 Outside of school and work, I have a number of different passions and interests in a variety of areas. Whether it's surfing, running, lifting, or pickup basketball, I love to stay active. In addition, I've played piano my entire life and recently discovered a new found passion for jazz music and improvisation. I've recently become obsessed with poker and have always been a die hard Miami sports fan.
               </p>
+              <ButtonComponent
+                text="my interests!"
+                path="/interests"
+              />
           </div>
         }
       />
