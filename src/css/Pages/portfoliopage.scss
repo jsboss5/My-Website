@@ -1,0 +1,69 @@
+@import '../colors.scss';
+
+.work-title-photo-wrapper {
+    img{
+        height: 350px;
+        border-radius: 14px;
+    }
+}
+
+.work-title-text-wrapper{
+    h1{
+        font-size: 100px;
+        padding-bottom: 14px;
+    }
+    //   include this for aligning download resume on mobile class
+    // .download-resume-wrapper{
+    //     // &.mobile{
+    //     //     width: 100%;
+    //     //     display: flex;
+    //     //     justify-content: center;
+    //     // }
+    // }
+}
+
+.company-logo-wrapper{
+    display: flex;
+    align-items: center;
+    img{
+        height: 200px;
+    }
+}
+
+.phoenix{
+    padding-right: 0px !important;
+}
+
+.bloons{
+    img{
+        height: 180px;
+    }
+}
+.job-title-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-description-text-wrapper{
+    color: $gray5;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    .experience-title-text{
+        font-size: 30px;
+        .dates{
+            font-size: 20px;
+            font-weight: 200;
+            font-style: italic;
+            color: $orange1;
+        }
+    }
+    .company-text{
+        color: $orange1;
+        font-size: 40px;
+    }
+    .experience-description-text {
+        font-weight: 200;
+        font-size: 18px;
+    }
+}
+

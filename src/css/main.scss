@@ -1,9 +1,14 @@
-@import './HomePage';
-@import './NavigationBar';
+@import './Pages/HomePage';
+@import './Pages/InterestPage';
+@import './Pages/aboutpage';
+@import './Pages/portfoliopage';
+
+@import './Components/NavigationBar';
+@import './Components/contentsection';
+@import './Components/footer';
+@import './Components/socialmediasection';
+@import './Components/buttoncomponent';
+@import './Components/dropdownheader';
+
 @import './App';
-@import './contentsection';
-@import './footer';
-@import './socialmediasection';
-@import './aboutpage.scss';
-@import './buttoncomponent';
-@import './InterestPage'
+

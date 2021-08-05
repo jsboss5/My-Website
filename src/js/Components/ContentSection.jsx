@@ -6,6 +6,7 @@ export default function ContentSection ({
     columnOne,
     columnTwo,
     isMobile,
+    disableHover,
     }){
 
 
@@ -16,7 +17,7 @@ export default function ContentSection ({
       threshold: 0.75,
     });
 
-    const inViewCss = inView ? "in-view" : "";
+    const inViewCss = !disableHover && inView ? "in-view" : "";
 
     return(
         <section

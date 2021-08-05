@@ -1,0 +1,56 @@
+@import '../colors';
+
+.interests-main-photo{
+    img{
+        height: 500px;
+    }
+    .artist-caption{
+        padding-left: 18px;
+        font-size: 12px;
+        padding-top: 10px;
+    }
+}
+
+.interests-title{
+    h1{
+        font-size: 140px;
+    }
+
+    h2{
+        font-size: 80px;
+    }
+
+}
+
+.fishing-photo{
+    img{
+        height: 400px;
+        border-radius: 14px;
+    }
+}
+
+.content-description-text{
+    p{
+        font-family: "Nunito", sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+    }
+}
+
+.food-photo{
+    img{
+        height: 350px;
+        border-radius: 14px;
+    }
+}
+
+.performance-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        height: 300px;
+        border-radius: 14px;
+        align-self: center;
+    }
+}
