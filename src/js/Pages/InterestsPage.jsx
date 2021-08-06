@@ -9,8 +9,9 @@ import PianoPerformance from "../../images/piano-performance.png";
 import "../../css/main.scss";
 
 const InterestsPage = (props) => {
-  const [isMobile, setIsMobile] = React.useState(false);
   const MOBILE_THRESH = 1100;
+  const [isMobile, setIsMobile] =
+    React.useState(window.innerWidth<MOBILE_THRESH);
 
   //  responsible for change to mobile view
   //  makes sure component is mounted before changing state.

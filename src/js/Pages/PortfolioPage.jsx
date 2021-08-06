@@ -12,9 +12,13 @@ import ButtonComponent from "../Components/ButtonComponent";
 import "../../css/main.scss";
 
 const PortfolioPage = (props) => {
-  const [isMobile, setIsMobile] = React.useState(false);
-
   const MOBILE_THRESH = 1000;
+  const NAV_MOBILE_THRESH = 800;
+
+  const [isMobile, setIsMobile] =
+    React.useState(window.innerWidth<MOBILE_THRESH);
+  const [navIsMobile, setNavIsMobile] =
+    React.useState(window.innerWidth<NAV_MOBILE_THRESH);
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -28,6 +32,7 @@ const PortfolioPage = (props) => {
     window.addEventListener('resize', () => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
+        setNavIsMobile(window.innerWidth < NAV_MOBILE_THRESH);
       }
     }, false);
   };
@@ -43,6 +48,8 @@ const PortfolioPage = (props) => {
     <section className="page-container">
       <ContentSection
         isMobile={isMobile}
+        //  hardcoded (should be same pixels as nav MOBILE_THRESH)
+        disableHover={navIsMobile}
         columnOne=
           {
             <div className="work-title-text-wrapper">

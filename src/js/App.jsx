@@ -6,16 +6,43 @@ import NavigationBar from "../js/Components/NavigationBar.jsx";
 import SocialMediaSection from "./Components/SocialMediaSection.jsx";
 import PortfolioPage from "./Pages/PortfolioPage.jsx";
 import Footer from "../js/Components/Footer";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import { Redirect } from 'react-router'
 
 
 import "../css/main.scss";
 
 export default function App() {
+  const [navIsDropped, setNavIsDropped] = React.useState(false);
+
+  const dropDownNav = (isExpanded) => {
+    setNavIsDropped(isExpanded);
+  };
+
+  const navDropDown = (
+    <ul className="nav-content-box drop-down-nav">
+      <li>
+        <Link to="/">home</Link>
+
+      </li>
+      <li>
+        <Link to="/about">about me</Link>
+
+      </li>
+      <li>
+        <Link to="/interests">interests</Link>
+      </li>
+      <li>
+        <Link to="/experience">professional experience</Link>
+      </li>
+    </ul>
+  );
+
+
   return (
     <div>
-      <NavigationBar/>
+      <NavigationBar navDropDownCallback={dropDownNav}/>
+      {navIsDropped && navDropDown}
       <Switch>
         <Route exact path="/">
           <Redirect to="/home" />

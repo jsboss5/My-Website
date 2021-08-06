@@ -6,21 +6,23 @@ export default function Footer(props){
     return (
         //  see navbar.scss for more styling
         <div className="footer-container">
-            <div className="nav-content-box-container">
-                <ul className="nav-content-box">
-                    <li>
-                        <Link to="/home">home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">about</Link>
-                    </li>
-                    <li>
-                        <Link to="/interests">interests</Link>
-                    </li>
-                    <li>
-                        <Link to="/experience">professional experience</Link>
-                    </li>
-                </ul>
+            <div className="nav-content-box-wrapper">
+                <div className="wide-nav-content-box-container">
+                    <ul className="nav-content-box">
+                        <li>
+                            <Link to="/home">home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">about</Link>
+                        </li>
+                        <li>
+                            <Link to="/interests">interests</Link>
+                        </li>
+                        <li>
+                            <Link to="/experience">professional experience</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <h3 className="footer-stamp">Joshua Boss - 2021</h3>
         </div>

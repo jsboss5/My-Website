@@ -9,8 +9,9 @@ import ButtonComponent from "../Components/ButtonComponent";
 import "../../css/main.scss";
 
 const HomePage = (props) => {
-  const [isMobile, setIsMobile] = React.useState(false);
   const MOBILE_THRESH = 900;
+  const [isMobile, setIsMobile] =
+    React.useState(window.innerWidth<MOBILE_THRESH);
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)

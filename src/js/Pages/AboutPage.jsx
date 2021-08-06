@@ -12,9 +12,9 @@ import WakeSurf from "../../images/wake-surf-photo.jpg"
 import "../../css/main.scss";
 
 const AboutPage = (props) => {
-  const [isMobile, setIsMobile] = React.useState(false);
-
   const MOBILE_THRESH = 1000;
+  const [isMobile, setIsMobile] =
+    React.useState(window.innerWidth<MOBILE_THRESH);
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
