@@ -20,21 +20,20 @@ const NavigationBar = ({navDropDownCallback}) => {
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < MOBILE_THRESH);
-      console.log("dropdown", dropDownOpen);
       checkNavAutoClose();
     }, false);
   };
 
+  //  Constnatly checks for window size change
   React.useEffect((onWindowChange), []);
   //  this is used to auto close when nav is expanded
   React.useEffect((checkNavAutoClose), [dropDownOpen, isMobile, checkNavAutoClose]);
 
   const handleBurgerClick = () => {
     const currentDropDownStatus = dropDownOpen;
-    console.log("currentDropDown",currentDropDownStatus)
+    console.log(currentDropDownStatus);
     setDropDownOpen(!currentDropDownStatus);
     navDropDownCallback(!currentDropDownStatus);
-    console.log(dropDownOpen);
   };
 
 

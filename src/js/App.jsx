@@ -33,7 +33,9 @@ export default function App() {
         <Link to="/interests">interests</Link>
       </li>
       <li>
-        <Link to="/experience">professional experience</Link>
+        <Link to="/experience">
+          professional experience
+        </Link>
       </li>
     </ul>
   );
@@ -41,7 +43,9 @@ export default function App() {
 
   return (
     <div>
-      <NavigationBar navDropDownCallback={dropDownNav}/>
+      <NavigationBar
+        navDropDownCallback={dropDownNav}
+        />
       {navIsDropped && navDropDown}
       <Switch>
         <Route exact path="/">
