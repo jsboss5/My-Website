@@ -8,10 +8,12 @@ import PianoPerformance from "../../images/piano-performance.png";
 
 import "../../css/main.scss";
 
-const InterestsPage = (props) => {
+const InterestsPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1100;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [navIsMobile, setNavIsMobile] =
+    React.useState(window.innerWidth<navMobThresh);
 
   //  responsible for change to mobile view
   //  makes sure component is mounted before changing state.
@@ -27,10 +29,11 @@ const InterestsPage = (props) => {
     window.addEventListener('resize', () => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
+        setNavIsMobile(window.innerWidth < navMobThresh);
       }
     }, false);
   };
-  React.useEffect(onWindowChange, []);
+  React.useEffect(onWindowChange, [navMobThresh]);
 
   //  when link is clicked it scrolls to top and resize if necessary.
   React.useEffect(()=> window.scrollTo(0,0), []);
@@ -40,6 +43,7 @@ const InterestsPage = (props) => {
     <section className="page-container">
       <ContentSection
         isMobile = {isMobile}
+        disableHover={navIsMobile}
         columnOne =
           {
             <div className="interests-main-photo">

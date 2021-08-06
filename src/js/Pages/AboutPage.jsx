@@ -11,10 +11,13 @@ import WakeSurf from "../../images/wake-surf-photo.jpg"
 
 import "../../css/main.scss";
 
-const AboutPage = (props) => {
+const AboutPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1000;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [navIsMobile, setNavIsMobile] =
+    React.useState(window.innerWidth<navMobThresh);
+
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -28,10 +31,11 @@ const AboutPage = (props) => {
     window.addEventListener('resize', () => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
+        setNavIsMobile(window.innerWidth < navMobThresh);
       }
     }, false);
   };
-  React.useEffect(onWindowChange, []);
+  React.useEffect(onWindowChange, [navMobThresh]);
 
   const nameMobileClass = isMobile ? 'mobile' : '';
 
@@ -42,6 +46,7 @@ const AboutPage = (props) => {
   return (
     <section className="page-container">
       <ContentSection
+        disableHover={navIsMobile}
         isMobile={isMobile}
         columnOne =
           {

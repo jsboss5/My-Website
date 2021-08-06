@@ -1,6 +1,5 @@
 import React from 'react';
 import OpenCarrot from "../../images/open-carrot-blue.png"
-import ContentSection from './ContentSection';
 
 export default function DropDownSection({
     text,

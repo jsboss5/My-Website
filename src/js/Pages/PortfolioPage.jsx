@@ -11,14 +11,13 @@ import SpecialOlympicsLogo from '../../images/special-olympics-logo.png'
 import ButtonComponent from "../Components/ButtonComponent";
 import "../../css/main.scss";
 
-const PortfolioPage = (props) => {
+const PortfolioPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1000;
-  const NAV_MOBILE_THRESH = 800;
 
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
-    React.useState(window.innerWidth<NAV_MOBILE_THRESH);
+    React.useState(window.innerWidth<navMobThresh);
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -32,11 +31,11 @@ const PortfolioPage = (props) => {
     window.addEventListener('resize', () => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
-        setNavIsMobile(window.innerWidth < NAV_MOBILE_THRESH);
+        setNavIsMobile(window.innerWidth < navMobThresh);
       }
     }, false);
   };
-  React.useEffect(onWindowChange, []);
+  React.useEffect(onWindowChange, [navMobThresh]);
 
   const nameMobileClass = isMobile ? 'mobile' : '';
 
@@ -79,7 +78,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper">
-                    <img src={YextLogo}/>
+                    <img src={YextLogo} alt="yext"/>
                   </div>
               }
               columnTwo={
@@ -102,7 +101,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper">
-                    <img src={AryeoLogo}/>
+                    <img src={AryeoLogo} alt="aryeo"/>
                   </div>
               }
               columnTwo={
@@ -134,7 +133,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper daml">
-                    <img src={DamlLogo}/>
+                    <img src={DamlLogo} alt="daml"/>
                   </div>
               }
               columnTwo={
@@ -157,7 +156,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper">
-                    <img src={SpecialOlympicsLogo}/>
+                    <img src={SpecialOlympicsLogo} alt="SONC"/>
                   </div>
               }
               columnTwo={
@@ -188,7 +187,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper bloons">
-                    <img src={BloonsLogo}/>
+                    <img src={BloonsLogo} alt="bloons"/>
                   </div>
               }
               columnTwo={
@@ -209,7 +208,7 @@ const PortfolioPage = (props) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper">
-                    <img src={PhoenixLogo}/>
+                    <img src={PhoenixLogo} alt="phnx"/>
                   </div>
               }
               columnTwo={

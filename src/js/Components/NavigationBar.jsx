@@ -3,41 +3,55 @@ import {Link} from "react-router-dom";
 import HamburgerIcon from "../../images/hamburger-icon.png";
 import "../../css/main.scss";
 
-const NavigationBar = ({navDropDownCallback}) => {
-  const MOBILE_THRESH = 800;
+const NavigationBar = ({
+  navDropDownCallback,
+  navIsDroppedGetter,
+  navMobileThresh,
+}) => {
+  const MOBILE_THRESH = navMobileThresh;
 
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
-  const [dropDownOpen, setDropDownOpen] = React.useState(false);
 
-  const checkNavAutoClose = () => {
-    if(!isMobile && dropDownOpen){
-      navDropDownCallback(false); //  close it
-      setDropDownOpen(false);
-    }
-  };
+  const checkNavAutoClose = React.useCallback(
+    () => {
+        console.log("outside");
+        console.log("navisDropped", navIsDroppedGetter());
+      if(!isMobile && navIsDroppedGetter()){
+        navDropDownCallback(false); //  close it
+        console.log("Inside");
+        console.log("isMobile", isMobile);
+        console.log("navisDropped", navIsDroppedGetter());
+      }
+    },
+    [isMobile, navDropDownCallback, navIsDroppedGetter]);
 
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < MOBILE_THRESH);
+      const newMobileStatus =window.innerWidth < MOBILE_THRESH;
+      if((newMobileStatus) !== isMobile){
+        setIsMobile(window.innerWidth < MOBILE_THRESH);
+      }
       checkNavAutoClose();
+
     }, false);
   };
 
-  //  Constnatly checks for window size change
-  React.useEffect((onWindowChange), []);
-  //  this is used to auto close when nav is expanded
-  React.useEffect((checkNavAutoClose), [dropDownOpen, isMobile, checkNavAutoClose]);
+  //  Constantly checks for window size change
+  React.useEffect(
+    (onWindowChange),
+    [checkNavAutoClose, navMobileThresh, isMobile, MOBILE_THRESH]
+  );
 
   const handleBurgerClick = () => {
-    const currentDropDownStatus = dropDownOpen;
-    console.log(currentDropDownStatus);
-    setDropDownOpen(!currentDropDownStatus);
+    const currentDropDownStatus = navIsDroppedGetter();
+    // console.log(currentDropDownStatus);
+    // setDropDownOpen(!currentDropDownStatus);
     navDropDownCallback(!currentDropDownStatus);
   };
 
 
-  const isOpenCssClass = dropDownOpen ? 'is-open' : '';
+  const isOpenCssClass = navIsDroppedGetter() ? 'is-open' : '';
 
   const navList = (
     <ul className="nav-content-box">

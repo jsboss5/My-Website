@@ -8,10 +8,12 @@ import ButtonComponent from "../Components/ButtonComponent";
 
 import "../../css/main.scss";
 
-const HomePage = (props) => {
+const HomePage = ({navMobThresh}) => {
   const MOBILE_THRESH = 900;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [navIsMobile, setNavIsMobile] =
+    React.useState(window.innerWidth<navMobThresh);
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -26,10 +28,11 @@ const HomePage = (props) => {
     window.addEventListener('resize', () => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
+        setNavIsMobile(window.innerWidth < navMobThresh);
       }
     }, false);
   };
-  React.useEffect(onWindowChange, []);
+  React.useEffect(onWindowChange, [navMobThresh]);
 
   //  when link is clicked it scrolls to top and resizes if necessary
   React.useEffect(()=> window.scrollTo(0,0), []);
@@ -41,6 +44,7 @@ const HomePage = (props) => {
       {/* <NavigationBar /> */}
       <ContentSection
         isMobile = {isMobile}
+        disableHover={navIsMobile}
         columnOne =
           {
             <div className="profile-photo">
