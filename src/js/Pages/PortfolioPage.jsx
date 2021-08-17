@@ -13,6 +13,7 @@ import "../../css/main.scss";
 
 const PortfolioPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1000;
+  const RESUME_PATH = 'files/website-resume.pdf';
 
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
@@ -54,7 +55,10 @@ const PortfolioPage = ({navMobThresh}) => {
             <div className="work-title-text-wrapper">
               <h1>work portfolio</h1>
               <div className={"download-resume-wrapper " + nameMobileClass}>
-                <ButtonComponent text="Download Resume ∨"/>
+                <ButtonComponent
+                  text="Download Resume ∨"
+                  onClick={()=>window.open(RESUME_PATH)}
+                  />
               </div>
             </div>
           }
@@ -89,7 +93,11 @@ const PortfolioPage = ({navMobThresh}) => {
                       Software Engineering Intern <span className="dates">(summer 2021)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      This summer, I had  the incredible opportunity to work as a Software Engineering Intern at Yext, a B2B software company focused on helping people find the information they're looking for on the internet. I worked on Yexts' new flagship product called Answers, which brings google quality search to the enterprise. By using Answers, companies can provide an AI and NLP driven search experience to their users hosted on their own individual platforms. With my interested in ML, it was a natural fit for me to work on this cutting edge technology. I interned on a 4-person full stack team called Juno, which owns the platform used by the answers administrators (representatives from a client company who configure and monitor the search experience).
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                      On team Juno, I was treated as a full-time software engineer and given the corresponding responsibilites. Rather than working on an isolated intern project all summer, I owned and implemented various full stack features now being used by millions of real users. I worked with PMs and designers to implement the front end portions of these features using react, javascript, html, and css. I also set up RPC endpoints using proto3 for these features and implemented the backend logic in java. I utilized SQL (insert java sql library) to make the necessary database fetches to integrate with the rest of the feautures. I wrote extensive integration and unit tests for backend logic, databse ooperations, and even jest tests for front end components. I responded to tech ops tickets involving my features and maintained them through their lifecycle. In addition to these full stack features, I got experience with implementing latency telemetry using prometheus and visualizing with grafana. I had an incredible summer and learaned so much.
                     </p>
                   </div>
               }

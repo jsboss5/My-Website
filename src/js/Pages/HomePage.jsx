@@ -1,19 +1,28 @@
 import React from "react";
+import { useHistory } from 'react-router-dom'
 
 import ContentSection from "../Components/ContentSection";
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
 import MainPhoto from "../../images/in-the-canyon.jpeg";
+import NewProfile from "../../images/new_profile.png";
 import ButtonComponent from "../Components/ButtonComponent";
 
 
 import "../../css/main.scss";
 
-const HomePage = ({navMobThresh}) => {
+const HomePage = ({
+  navMobThresh,
+  onLearnMore,
+}) => {
   const MOBILE_THRESH = 900;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
+
+    //  creates histoory object to be used for button callback
+    const history = useHistory();
+
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -48,7 +57,7 @@ const HomePage = ({navMobThresh}) => {
         columnOne =
           {
             <div className="profile-photo">
-              <img src={MainPhoto} alt="opening-pic" />
+              <img src={NewProfile} alt="opening-pic" />
             </div>
           }
         columnTwo=
@@ -74,7 +83,10 @@ const HomePage = ({navMobThresh}) => {
               </p>
               <ButtonComponent
                 text='learn more!'
-                path="/about"
+                onClick= {() => {
+                  history.push('/about');
+                  onLearnMore();
+                }}
                 />
             </div>
           }

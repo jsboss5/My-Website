@@ -1,13 +1,24 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import HamburgerIcon from "../../images/hamburger-icon.png";
+import {CSSTransition} from 'react-transition-group';
 import "../../css/main.scss";
 
 const NavigationBar = ({
   navDropDownCallback,
   navIsDroppedGetter,
   navMobileThresh,
+  selectedPage,
+  changePageOnClick,
 }) => {
+  //  enum for page types coppied from App.jsx
+  const pages = {
+    HOME: "home",
+    ABOUT: "about",
+    INTERESTS: "interests",
+    WORK: "experience"
+  };
+
   const MOBILE_THRESH = navMobileThresh;
 
   const [isMobile, setIsMobile] =
@@ -15,13 +26,8 @@ const NavigationBar = ({
 
   const checkNavAutoClose = React.useCallback(
     () => {
-        console.log("outside");
-        console.log("navisDropped", navIsDroppedGetter());
       if(!isMobile && navIsDroppedGetter()){
         navDropDownCallback(false); //  close it
-        console.log("Inside");
-        console.log("isMobile", isMobile);
-        console.log("navisDropped", navIsDroppedGetter());
       }
     },
     [isMobile, navDropDownCallback, navIsDroppedGetter]);
@@ -45,8 +51,6 @@ const NavigationBar = ({
 
   const handleBurgerClick = () => {
     const currentDropDownStatus = navIsDroppedGetter();
-    // console.log(currentDropDownStatus);
-    // setDropDownOpen(!currentDropDownStatus);
     navDropDownCallback(!currentDropDownStatus);
   };
 
@@ -56,18 +60,41 @@ const NavigationBar = ({
   const navList = (
     <ul className="nav-content-box">
       <li>
-        <Link to="/">home</Link>
+        <Link
+          to="/"
+          className={selectedPage===pages.HOME ? "selected":""}
+          onClick={()=>changePageOnClick(pages.HOME)}
+          >
+            home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/about"
+          className={selectedPage===pages.ABOUT ? "selected":""}
+          onClick={()=>changePageOnClick(pages.ABOUT)}
+          >
+            about me
+        </Link>
 
       </li>
       <li>
-        <Link to="/about">about me</Link>
-
+        <Link
+          to="/interests"
+          className={selectedPage===pages.INTERESTS ? "selected":""}
+          onClick={()=>changePageOnClick(pages.INTERESTS)}
+        >
+            interests
+        </Link>
       </li>
       <li>
-        <Link to="/interests">interests</Link>
-      </li>
-      <li>
-        <Link to="/experience">professional experience</Link>
+        <Link
+          to="/experience"
+          className={selectedPage===pages.WORK ? "selected":""}
+          onClick={()=>changePageOnClick(pages.WORK)}
+        >
+          professional experience
+        </Link>
       </li>
     </ul>
     );

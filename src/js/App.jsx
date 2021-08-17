@@ -13,7 +13,44 @@ import { Redirect } from 'react-router'
 import "../css/main.scss";
 
 export default function App() {
+  const pages = {
+    HOME: "home",
+    ABOUT: "about",
+    INTERESTS: "interests",
+    WORK: "experience"
+  };
+
+  //  use the current url to determine the initial page. This is used for highlighting the proper nav title.
+  let startingPage = "";
+  //  get rid of the first forward slash.
+  const currentURLExtension = window.location.pathname.substr(1);
+  //  Switch statement determines initial selected page. THis is only necessary to make sure url is correct. Might just replace with the one line solution
+  switch(currentURLExtension){
+    case pages.HOME:
+      startingPage = pages.HOME;
+      break;
+
+    case pages.ABOUT:
+      startingPage = pages.ABOUT;
+      break;
+
+    case pages.INTERESTS:
+      startingPage = pages.INTERESTS;
+      break;
+
+    case pages.WORK:
+      startingPage = pages.WORK;
+      break;
+
+    default:
+      startingPage = pages.HOME;
+  };
+
   const [navIsDropped, setNavIsDropped] = React.useState(false);
+  const [currentPageSelected, setCurrentPageSelected] =
+    React.useState(startingPage);
+
+  console.log(window.location.pathname.substr(1));
 
   //  determines when nav bar shifts to hamburger (and no-highlight rules for other pages)
   const NAV_MOBILE_THRESH = 800;
@@ -22,8 +59,12 @@ export default function App() {
     setNavIsDropped(isExpanded);
   };
 
-  const onNavButtonEnter = () => {
+  //  when new page button is clicked from drop down.
+  //  param should be a page type from enum above
+  const onNavButtonEnter = (pageType) => {
     setNavIsDropped(false);
+    setCurrentPageSelected(pageType);
+    console.log(pageType);
   };
 
   const navIsDroppedGetter = () => {
@@ -34,28 +75,28 @@ export default function App() {
     <ul className="nav-content-box drop-down-nav">
       <li>
         <Link
-          onClick={onNavButtonEnter}
+          onClick={() => onNavButtonEnter(pages.HOME)}
           to="/">
             home
         </Link>
       </li>
       <li>
         <Link
-          onClick={onNavButtonEnter}
+          onClick={() => onNavButtonEnter(pages.ABOUT)}
           to="/about">
             about me
         </Link>
       </li>
       <li>
         <Link
-          onClick={onNavButtonEnter}
+          onClick={() => onNavButtonEnter(pages.INTERESTS)}
           to="/interests">
             interests
         </Link>
       </li>
       <li>
         <Link
-          onClick={onNavButtonEnter}
+          onClick={() => onNavButtonEnter(pages.WORK)}
           to="/experience">
             professional experience
         </Link>
@@ -70,6 +111,8 @@ export default function App() {
         navDropDownCallback={dropDownNav}
         navIsDroppedGetter={navIsDroppedGetter}
         navMobileThresh={NAV_MOBILE_THRESH}
+        selectedPage={currentPageSelected}
+        changePageOnClick={setCurrentPageSelected}
         />
       {navIsDropped && navDropDown}
       <Switch>
@@ -78,11 +121,19 @@ export default function App() {
           <Redirect to="/home" />
         </Route>
         <Route
-          render={()=><HomePage navMobThresh={NAV_MOBILE_THRESH}/>}
+          render={()=>
+            <HomePage 
+              navMobThresh={NAV_MOBILE_THRESH}
+              onLearnMore={()=>setCurrentPageSelected(pages.ABOUT)}
+            />}
           path="/home"
           />
         <Route
-          render={()=><AboutPage navMobThresh={NAV_MOBILE_THRESH}/>}
+          render={()=>
+            <AboutPage
+              navMobThresh={NAV_MOBILE_THRESH}
+              onLearnMore={()=>setCurrentPageSelected(pages.INTERESTS)}
+            />}
           path="/about"
           />
         <Route
@@ -97,7 +148,7 @@ export default function App() {
           />
       </Switch>
       <SocialMediaSection/>
-      <Footer/>
+      <Footer changePageOnClick={setCurrentPageSelected}/>
     </div>
   );
 };

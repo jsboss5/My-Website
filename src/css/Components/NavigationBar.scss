@@ -54,6 +54,9 @@
   padding-top: 12px;
 
   a{
+    &.selected{
+      color:$orange1;
+    }
     text-align: center;
 
     padding-bottom:2px;

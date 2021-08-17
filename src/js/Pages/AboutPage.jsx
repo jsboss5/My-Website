@@ -1,7 +1,7 @@
 import React from "react";
 import ContentSection from "../Components/ContentSection";
 import ButtonComponent from "../Components/ButtonComponent";
-
+import {useHistory} from 'react-router-dom';
 import WithYsanne from "../../images/with-ysanne.jpg";
 import FirstDay from "../../images/first-day-of-work.jpg";
 import MainPhoto from "../../images/in-the-canyon.jpeg";
@@ -11,13 +11,18 @@ import WakeSurf from "../../images/wake-surf-photo.jpg"
 
 import "../../css/main.scss";
 
-const AboutPage = ({navMobThresh}) => {
+const AboutPage = ({
+  navMobThresh,
+  onLearnMore,
+  }) => {
   const MOBILE_THRESH = 1000;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
 
+  // create history object for button to interests page
+  const history = useHistory();
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -132,7 +137,10 @@ const AboutPage = ({navMobThresh}) => {
               </p>
               <ButtonComponent
                 text="my interests!"
-                path="/interests"
+                onClick= {()=> {
+                  history.push("/interests");
+                  onLearnMore();  //  callback function which highlights proper page.
+              }}
               />
           </div>
         }
