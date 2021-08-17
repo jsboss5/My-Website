@@ -6,13 +6,15 @@ import NavigationBar from "../js/Components/NavigationBar.jsx";
 import SocialMediaSection from "./Components/SocialMediaSection.jsx";
 import PortfolioPage from "./Pages/PortfolioPage.jsx";
 import Footer from "../js/Components/Footer";
-import { Route, Switch, Link } from "react-router-dom";
-import { Redirect } from 'react-router'
+import { Route, Switch, Link, useHistory } from "react-router-dom";
+import { Redirect } from 'react-router';
+
 
 
 import "../css/main.scss";
 
 export default function App() {
+  //  possible pages that can be selected. Essentially this is an Enum
   const pages = {
     HOME: "home",
     ABOUT: "about",
@@ -20,37 +22,69 @@ export default function App() {
     WORK: "experience"
   };
 
-  //  use the current url to determine the initial page. This is used for highlighting the proper nav title.
-  let startingPage = "";
-  //  get rid of the first forward slash.
-  const currentURLExtension = window.location.pathname.substr(1);
-  //  Switch statement determines initial selected page. THis is only necessary to make sure url is correct. Might just replace with the one line solution
-  switch(currentURLExtension){
-    case pages.HOME:
-      startingPage = pages.HOME;
-      break;
+  // returns the starting page from the current URL
+  const getPageTypeFromUrl = React.useCallback(() => {
+    //  use the current url to determine the initial page. This is used for highlighting the proper nav title.
+    let startingPage = "";
+    //  get rid of the first forward slash.
+    const currentURLExtension = window.location.pathname.substr(1);
+    //  Switch statement determines initial selected page. THis is only necessary to make sure url is correct. Might just replace with the one line solution
+    switch(currentURLExtension){
+      case pages.HOME:
+        startingPage = pages.HOME;
+        break;
 
-    case pages.ABOUT:
-      startingPage = pages.ABOUT;
-      break;
+      case pages.ABOUT:
+        startingPage = pages.ABOUT;
+        break;
 
-    case pages.INTERESTS:
-      startingPage = pages.INTERESTS;
-      break;
+      case pages.INTERESTS:
+        startingPage = pages.INTERESTS;
+        break;
 
-    case pages.WORK:
-      startingPage = pages.WORK;
-      break;
+      case pages.WORK:
+        startingPage = pages.WORK;
+        break;
 
-    default:
-      startingPage = pages.HOME;
-  };
+      default:
+        startingPage = pages.HOME;
+    };
+    return startingPage;
+  }, [pages.HOME, pages.ABOUT, pages.INTERESTS, pages.WORK]);
 
-  const [navIsDropped, setNavIsDropped] = React.useState(false);
+  //  This handles forward and back buttons (rehighlights proper nav button) ========
+  const [ locationKeys, setLocationKeys ] = React.useState([]);
+  const history = useHistory();
+
+  React.useEffect(() => {
+    return history.listen(location => {
+      if (history.action === 'PUSH') {
+        setLocationKeys([ location.key ])
+      }
+
+      if (history.action === 'POP') {
+        if (locationKeys[1] === location.key) {
+          setLocationKeys(([ _, ...keys ]) => keys)
+
+          // Handle forward event
+          setCurrentPageSelected(getPageTypeFromUrl());
+
+        } else {
+          setLocationKeys((keys) => [ location.key, ...keys ])
+
+          // Handle back event
+          setCurrentPageSelected(getPageTypeFromUrl());
+        }
+      }
+    })
+  }, [ locationKeys, history, getPageTypeFromUrl])
+
+//========================
+
+  //  Create state for current page selected
   const [currentPageSelected, setCurrentPageSelected] =
-    React.useState(startingPage);
-
-  console.log(window.location.pathname.substr(1));
+    React.useState(getPageTypeFromUrl());
+  const [navIsDropped, setNavIsDropped] = React.useState(false);
 
   //  determines when nav bar shifts to hamburger (and no-highlight rules for other pages)
   const NAV_MOBILE_THRESH = 800;

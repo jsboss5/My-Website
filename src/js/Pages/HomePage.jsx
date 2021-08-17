@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 
 import ContentSection from "../Components/ContentSection";
 import SidePhoto from "../../images/side-profile-bridge.jpeg";
-import MainPhoto from "../../images/in-the-canyon.jpeg";
 import NewProfile from "../../images/new_profile.png";
 import ButtonComponent from "../Components/ButtonComponent";
 
@@ -22,7 +21,6 @@ const HomePage = ({
 
     //  creates histoory object to be used for button callback
     const history = useHistory();
-
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
