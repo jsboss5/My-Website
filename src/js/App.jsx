@@ -98,7 +98,6 @@ export default function App() {
   const onNavButtonEnter = (pageType) => {
     setNavIsDropped(false);
     setCurrentPageSelected(pageType);
-    console.log(pageType);
   };
 
   const navIsDroppedGetter = () => {

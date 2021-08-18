@@ -11,7 +11,6 @@ export default function DropDownSection({
 
     const onHeaderClick = () => {
         setHeaderOpen(!headerOpen);
-        console.log("flag");
     };
 
     const iconClass = headerOpen ? "carrot-icon opened" : "carrot-icon closed";

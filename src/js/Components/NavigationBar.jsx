@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import HamburgerIcon from "../../images/hamburger-icon.png";
-import {CSSTransition} from 'react-transition-group';
 import "../../css/main.scss";
 
 const NavigationBar = ({
