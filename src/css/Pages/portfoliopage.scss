@@ -12,14 +12,6 @@
         font-size: 100px;
         padding-bottom: 14px;
     }
-    //   include this for aligning download resume on mobile class
-    // .download-resume-wrapper{
-    //     // &.mobile{
-    //     //     width: 100%;
-    //     //     display: flex;
-    //     //     justify-content: center;
-    //     // }
-    // }
 }
 
 .company-logo-wrapper{
@@ -63,7 +55,10 @@
     }
     .experience-description-text {
         font-weight: 200;
-        font-size: 18px;
+        font-size: 16px;
+        &.bolded-text{
+            font-weight: 600;
+        }
     }
 }
 

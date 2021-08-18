@@ -119,7 +119,18 @@ const PortfolioPage = ({navMobThresh}) => {
                       Machine Learning Intern <span className="dates">(summer 2020)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      Aryeo is a Boston based startup building a realestate content management platform for realestate agents and realestate photographers. The service allows agents and photographers an all in one platform for storing and managing information and photos about their properties. Over the 2020 summer, I was tasked with developing a deep-learning object detection model to indetify and classify 30 types of household amenities in images found on Aryeo's platform. There were a number of different use cases for this technoloogy, including the validation of property descriptions and integrations for more intelligent property search capabilities. Because the founders of this startup had very little ML expereince, me and my fellow intern were tasked with designing and implementing the entire Computer vision system.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                      As far as technical specifics, I conducted transfer learning on a pretrained RetinaNet model, utilizing Pytorch and Juptyer NB, hosted on a Google Cloud Virtual Machine. Specifically, we used Facebook AI's detectron2 object detection library, and used custom labeled data from Aryeo's own user data base to refine the model. In addition, I improved the system's mean Average Precition (mAP) by over 10%, by introducing both model ensembling (combining results of different models), and pseudo-labeling (using the model to generate more training data). I used streamlit to create a UI for the model, allowing users to upload photos of their homes and see labeled bounding boxes around various household amenities. I also had the opportunity to present my work to a pannel of google engineers, the Duke Machine Learning Community and the Aryeo team. Overall this was an awesome experience that grew my interest in Machine learning.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text bolded-text">
+                     Final Presentation: <a href="https://docs.google.com/presentation/d/1IfdzXHqs6FoRqbN-TAmi58Rg0cJVRgQjvG3PbjCJiDw/edit?usp=sharing">here</a>
+                    </p>
+                    <p className="experience-description-text bolded-text">
+                     Featured Code: <a href="https://github.com/jsboss5/Aryeo-Amenity-Detection">here</a>
                     </p>
                   </div>
               }
@@ -152,7 +163,15 @@ const PortfolioPage = ({navMobThresh}) => {
                       Director <span className="dates">(november 2020 - present)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      Duke Applied Machine Learning (DAML) is a group of undergraduate, masters, and Ph.D. students specializing in data science, machine learning, and software engineering. We provide various types of technical support for startups, fortune 500 companies, Duke professors, and even Duke students. While we've provided real value to many different clients, we also pride ourselves on being an education-first organziation. We train young undergraduate students in contemporary industry technologies and concepts that they frankly can't get in the classroom. Many of our students apply having only taken 1 or 2 undergraduate CS courses. We train them in one of 4 tracks that most interests them: Software Engineering, Machine Learning / Data Science, Hardware Engineering, or Product Management. We then place them on a project team which we match to an interested client looking to build or improve their own platforms. This provides real-world experience for students, and incredible (cheap) technical support for clients. In addition to our normal cohort which runs each semester, we also run the Duke Innovation Studio, which our own internaal startup incubator, and Tech for Equity, an internship program matching technical students to non profits.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                      As director of this organization, I am responsible for a number of different moving parts, and have accomplished a lot in my time here. DAML has been (BY FAR) my most rewarding and time consuming engagement at Duke. As director, I lead exec board meetings and maintain a high level understanding and about what is going on in  our 4 primary divisions, as these division leads report to me. I also lead all client communication and outreach meetings, from initial emails to finalizing project details. In these client meetings, I use my engineering experience and expertise in both Machine Learning and Software Engineering to assess and scope out potential technical projects. This is similary to tech consulting, and often requires getting very indepth about a client's business and technical infrastructure. I led the project manaagement division, for which I wrote over 25 hours of PM coursework, lead all candidate interviews, and run pm team meetings. I also handle a number of different logistical operations for the organization. I've written contracts for both students and clients, handeled payment to students via our LLC,  built out an incredibly complicated and extensive airtable platform which automates our entire recruitment and project onboarding process, and have even recently started filing paperwork to form a national nonprofit with the goal of creating different satelite branches at different universities. Over my time here, I've doubled the number of projects we're working on, grew the organization from 50 to 250 active members and have managed to dole out a total of about 200k in student stipends for technical projects.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text bolded-text">
+                     Our Website: <a href="https://www.dukeaml.com/">here</a>
                     </p>
                   </div>
               }
@@ -174,7 +193,7 @@ const PortfolioPage = ({navMobThresh}) => {
                       President <span className="dates">(april 2020 - present)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      Duke Special Olympics is Duke's chapter of the national nonprofit, Special Olympis. Special Olympics has the goal of giving individauls with physical and intelectual disabilites an opportunity to learn and grow through competing in various athletic endeavors. At Duke, we host what we call our Unified Sports Leaague, a intramural type league which places special olympics athletes on teams with Duke students to compete in both Flag Football and Basketball. We also host health trainings monthly and coordinate other volunteer opportunities in the Durham county area for Duke students. We recently were just recognized as a Unifed Champion school, putting us in an elite class of only 100 universities in the world. Durring the pandemic, we had to change gears and host an online unified sports experience in which we met weekly and worked out together over zoom. Athletes and students always have a blast with Unified.
                     </p>
                   </div>
               }
@@ -204,7 +223,15 @@ const PortfolioPage = ({navMobThresh}) => {
                     Bloons Tower Defense Game <span className="dates">(october - december 2020)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      Me and a group of 3 other friends decided to build from scratch, a remake of the famous "Bloons Tower Defense" game using java and javaFX. For those who don't know, Bloons Tower Defense is a tower defense game which allows users to strategically place different types of towers with different capabilites on a map to pop all targets before they traverse a preset track. We built the game with good design principles in mind, and used the Model View Controller (MVC) project structure to organize our code. We designed our game with expansion in mind, using factory patterns, interfaces, and properties files for nearly all hard-coded values. This lets the developer easily change game features such as images for the game characters, the number of balloons for each level, and even the layout of the map. We included features such as coins, a tower shop, animations, splash screens, a map chooser with numerous maps, and even the obligatory annoying music! We also utilized extensive Junit testing with over 90% coverage.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                      Personally, I was primarily responsible for backend API design, target movement logic, and controller design. I was responsible for implementing the Data API, Engine API, GamePiece API, Updatable API, and Factory API, which powered the game. I also developed a bidirectional map data structure to be used in the controller so the front end and back end could add and remove game pieces and their corresponding frontend/backend objects in constant time, improving efficiency and design of the game. Overall, this project took hundreds of hours to complete. I HIGHLY encourage you to look at the code found below!
+                    </p>
+                    <br/>
+                    <p className="experience-description-text bolded-text">
+                     Game Code Found: <a href="https://www.dukeaml.com/">here</a>
                     </p>
                   </div>
               }
@@ -226,7 +253,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     The Phoenix Project <span className="dates">(summer 2020, 2021)</span>
                     </h2>
                     <p className="experience-description-text">
-                      Lorum ipsum delor impuasldkjflakjsdf ;asdkjf;laskj asd;lfkj skdfas;dlfkjas;ldkjf a;sldkfj a;lskdjf ;alskjdf ;alksjd f;laskj fd;laksjd f;lakjs d;flakjs d;flkajs d;flkajs ;dlkfj as;lkdfj a;slkdjfadkkdkkdkd kdkdfj skdfj sdkfjs dfkj sdkfj skjf skdjf ksdjf ksdjf ksdj fksj fksdjf ksdjf ksdjf lasd;f lasjkf ;laskjf ;laksjfd ;laksdjf a;lksjdf ;laksdjf ;alskjdf ;alskjdf ;alskjd f;laksj fd;lakdjs f;laskjf ;alskjfd l;askjf ;laskjf ;alksjdf ;laskjdf ;aslkdjf ;aslkdj fa;lskdjf ;alsdkfj a;slkdfj ;alskdjf a;lksdjf ;alksdjf ;alkdjsf ;alksdjf ;alskjdf ;laskdjf ;alskdjf ;alskdjf ;alskdjf ;alskdjf ;alskjdf ;alkdjf ;alskjf ;alsdkfj ;alskfj ;alskdfj ;aslkdjf ;aslkfj ;aslkfj ;aslkfdj ;aldkjf ;aslkjfd ;aslkdfj a;
+                      The Phoenix Project is a summer program put on by the Duke Applied Machine Learning Group. 
                     </p>
                   </div>
               }
