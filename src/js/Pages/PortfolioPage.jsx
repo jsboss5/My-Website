@@ -56,7 +56,7 @@ const PortfolioPage = ({navMobThresh}) => {
               <h1>work portfolio</h1>
               <div className={"download-resume-wrapper " + nameMobileClass}>
                 <ButtonComponent
-                  text="Download Resume ∨"
+                  text="download resume ∨"
                   onClick={()=>window.open(RESUME_PATH)}
                   />
               </div>
@@ -73,6 +73,7 @@ const PortfolioPage = ({navMobThresh}) => {
       <DropDownSection
         text="work experience"
         isOpen={true}
+        isMobile={isMobile}
         content =
         {
           <div className="drop-down-content-wrapper">
@@ -87,10 +88,10 @@ const PortfolioPage = ({navMobThresh}) => {
               }
               columnTwo={
                   <div className="experience-description-text-wrapper" >
-                    <h1 className="company-text">Yext</h1>
+                    <h1 className="company-text">yext</h1>
 
                     <h2 className="experience-title-text">
-                      Software Engineering Intern <span className="dates">(summer 2021)</span>
+                      software engineering intern <span className="dates">(summer 2021)</span>
                     </h2>
                     <p className="experience-description-text">
                       This summer, I had  the incredible opportunity to work as a Software Engineering Intern at Yext, a B2B software company focused on helping people find the information they're looking for on the internet. I worked on Yexts' new flagship product called Answers, which brings google quality search to the enterprise. By using Answers, companies can provide an AI and NLP driven search experience to their users hosted on their own individual platforms. With my interested in ML, it was a natural fit for me to work on this cutting edge technology. I interned on a 4-person full stack team called Juno, which owns the platform used by the answers administrators (representatives from a client company who configure and monitor the search experience).
@@ -114,9 +115,9 @@ const PortfolioPage = ({navMobThresh}) => {
               }
               columnTwo={
                   <div className="experience-description-text-wrapper" >
-                    <h1 className="company-text">Aryeo</h1>
+                    <h1 className="company-text">aryeo</h1>
                     <h2 className="experience-title-text">
-                      Machine Learning Intern <span className="dates">(summer 2020)</span>
+                      machine learning intern <span className="dates">(summer 2020)</span>
                     </h2>
                     <p className="experience-description-text">
                       Aryeo is a Boston based startup building a realestate content management platform for realestate agents and realestate photographers. The service allows agents and photographers an all in one platform for storing and managing information and photos about their properties. Over the 2020 summer, I was tasked with developing a deep-learning object detection model to indetify and classify 30 types of household amenities in images found on Aryeo's platform. There were a number of different use cases for this technoloogy, including the validation of property descriptions and integrations for more intelligent property search capabilities. Because the founders of this startup had very little ML experience, me and my fellow intern were tasked with designing and implementing the entire Computer vision system.
@@ -127,10 +128,10 @@ const PortfolioPage = ({navMobThresh}) => {
                     </p>
                     <br/>
                     <p className="experience-description-text bolded-text">
-                     Final presentation: <a href="https://docs.google.com/presentation/d/1IfdzXHqs6FoRqbN-TAmi58Rg0cJVRgQjvG3PbjCJiDw/edit?usp=sharing">here</a>
+                     final presentation: <a href="https://docs.google.com/presentation/d/1IfdzXHqs6FoRqbN-TAmi58Rg0cJVRgQjvG3PbjCJiDw/edit?usp=sharing">here</a>
                     </p>
                     <p className="experience-description-text bolded-text">
-                     Featured code: <a href="https://github.com/jsboss5/Aryeo-Amenity-Detection">here</a>
+                     featured code: <a href="https://github.com/jsboss5/Aryeo-Amenity-Detection">here</a>
                     </p>
                   </div>
               }
@@ -143,6 +144,7 @@ const PortfolioPage = ({navMobThresh}) => {
         <DropDownSection
         text="campus leadership"
         isOpen={true}
+        isMobile={isMobile}
         content =
         {
           <div className="drop-down-content-wrapper">
@@ -160,7 +162,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     <h1 className="company-text">duke applied machine learning</h1>
 
                     <h2 className="experience-title-text">
-                      Director <span className="dates">(november 2020 - present)</span>
+                      director <span className="dates">(november 2020 - present)</span>
                     </h2>
                     <p className="experience-description-text">
                       Duke Applied Machine Learning (DAML) is a group of undergraduate, masters, and Ph.D. students specializing in data science, machine learning, and software engineering. We provide various types of technical support for startups, fortune 500 companies, Duke professors, and even Duke students. While we've provided real value to many different clients, we also pride ourselves on being an education-first organziation. We train young undergraduate students in contemporary industry technologies and concepts that they frankly can't get in the classroom. Many of our students apply having only taken 1 or 2 undergraduate CS courses. We train them in one of 4 tracks that most interests them: Software Engineering, Machine Learning / Data Science, Hardware Engineering, or Product Management. We then place them on a project team which we match to an interested client looking to build or improve their own platform. This provides real-world experience for students, and incredible (low cost) technical support for clients. In addition to our normal cohort which runs each semester, we also run the Duke Innovation Studio, which our own internaal startup incubator, and Tech for Equity, an internship program matching technical students to non profits.
@@ -171,7 +173,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     </p>
                     <br/>
                     <p className="experience-description-text bolded-text">
-                     Check out our website: <a href="https://www.dukeaml.com/">here</a>
+                     check out our website: <a href="https://www.dukeaml.com/">here</a>
                     </p>
                   </div>
               }
@@ -188,9 +190,9 @@ const PortfolioPage = ({navMobThresh}) => {
               }
               columnTwo={
                   <div className="experience-description-text-wrapper" >
-                    <h1 className="company-text">Duke Special Olympics</h1>
+                    <h1 className="company-text">duke special olympics</h1>
                     <h2 className="experience-title-text">
-                      President <span className="dates">(april 2020 - present)</span>
+                      president <span className="dates">(april 2020 - present)</span>
                     </h2>
                     <p className="experience-description-text">
                       Duke Special Olympics is Duke's chapter of the national nonprofit, Special Olympis. Special Olympics has the goal of giving individauls with physical and intelectual disabilites an opportunity to learn and grow through competing in various athletic endeavors. At Duke, we host what we call our Unified Sports Leaague, a intramural type league which places special olympics athletes on teams with Duke students to compete in both Flag Football and Basketball. We also host health trainings monthly and coordinate other volunteer opportunities in the Durham county area for Duke students. We recently were just recognized as a Unifed Champion school, putting us in an elite class of only 100 universities in the world. Durring the pandemic, we had to change gears and host an online unified sports experience in which we met weekly and worked out together over zoom. Athletes and students always have a blast with Unified.
@@ -205,6 +207,7 @@ const PortfolioPage = ({navMobThresh}) => {
       <DropDownSection
         text="featured projects"
         isOpen={true}
+        isMobile={isMobile}
         content =
         {
           <div className="drop-down-content-wrapper">
@@ -220,7 +223,7 @@ const PortfolioPage = ({navMobThresh}) => {
               columnTwo={
                   <div className="experience-description-text-wrapper" >
                     <h2 className="experience-title-text">
-                    Bloons Tower Defense Game <span className="dates">(october - december 2020)</span>
+                    bloons tower defense game <span className="dates">(october - december 2020)</span>
                     </h2>
                     <p className="experience-description-text">
                       Me and a group of 3 other friends decided to build from scratch, a remake of the famous "Bloons Tower Defense" game using java and javaFX. For those who don't know, Bloons Tower Defense is a tower defense game which allows users to strategically place different types of towers with different capabilites on a map to pop all targets before they traverse a preset track. We built the game with good design principles in mind, and used the Model View Controller (MVC) project structure to organize our code. We designed our game with expansion in mind, using factory patterns, interfaces, and properties files for nearly all hard-coded values. This lets the developer easily change game features such as images for the game characters, the number of balloons for each level, and even the layout of the map. We included features such as coins, a tower shop, animations, splash screens, a map chooser with numerous maps, and even the obligatory annoying music! We also utilized extensive Junit testing with over 90% coverage.
@@ -231,7 +234,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     </p>
                     <br/>
                     <p className="experience-description-text bolded-text">
-                     Game code: <a href="https://www.dukeaml.com/">here</a>
+                     game code: <a href="https://www.dukeaml.com/">here</a>
                     </p>
                   </div>
               }
@@ -250,7 +253,7 @@ const PortfolioPage = ({navMobThresh}) => {
                   <div className="experience-description-text-wrapper" >
                     {/* <h1 className="company-text">The Phoenix Project</h1> */}
                     <h2 className="experience-title-text">
-                    The Phoenix Project <span className="dates">(summer 2020, 2021)</span>
+                    the phoenix project <span className="dates">(summer 2020, 2021)</span>
                     </h2>
                     <p className="experience-description-text">
                       The Phoenix Project is a summer program which matches Duke students to startups and large companies for full-time internships. In April of 2020, after losing my own internship due to the COVID-19 pandemic, me and a few friends had the idea to try and get everyone who lost internships an opportunity to work and grow their technical skillset while at home. We exhausted our personal and professional networks to set as many paid opportunities as possible. Our work paid off, and we gathered paid opportunities for over 200 students over 70 companies, including Twitter, Coursera, and the Department of Defense. In the summer of 2020, I was responsible for designing the organizational structure of the program, developing specific role specifications, and building out a program-wide Notion platform for 433 users. I worked with a contract attorney to generate contracts and conducted over 18 hours of interviews for 72 candidates.
@@ -261,7 +264,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     </p>
                     <br/>
                     <p className="experience-description-text bolded-text">
-                     Check out our website: <a href="https://www.phoenix.dukeaml.com/">here</a>
+                     check out our website: <a href="https://www.phoenix.dukeaml.com/">here</a>
                     </p>
                   </div>
               }

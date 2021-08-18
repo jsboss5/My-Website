@@ -66,7 +66,7 @@ const AboutPage = ({
           }
         columnTwo=
         {
-          <div className="ysanne-photo-wrapper">
+          <div className="canyon-photo-wrapper">
             <img src={MainPhoto} alt="side-pic" />
           </div>
         }

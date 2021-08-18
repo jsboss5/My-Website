@@ -19,9 +19,6 @@
         background-color: $light-orange1;
     }
 
-    .drop-down-title {
-        
-    }
     .arrow-icon-container{
         .carrot-icon{
             height: 50px;
@@ -29,6 +26,14 @@
             &.opened{
                 transform: rotate(180deg);
             }
+        }
+    }
+}
+
+.mobile-drop-down{
+    .drop-down-header-container{
+        .subtitle{
+            font-size: 40px;
         }
     }
 }

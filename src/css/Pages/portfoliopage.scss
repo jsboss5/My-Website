@@ -11,6 +11,8 @@
     h1{
         font-size: 100px;
         padding-bottom: 14px;
+        font-family: "Nunito", sans-serif;
+
     }
 }
 
@@ -68,3 +70,20 @@
     }
 }
 
+.mobile{
+    .work-title-text-wrapper{
+        h1{
+            font-size: 80px;
+        }
+    }
+    .work-title-photo-wrapper{
+        img{
+            height: 250px;
+        }
+    }
+    .company-logo-wrapper{
+        img{
+            height: 150px;
+        }
+    }
+}

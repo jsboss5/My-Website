@@ -6,6 +6,12 @@
         border-radius: 14px;
     }
 }
+.canyon-photo-wrapper{
+    img{
+        height: 500px;
+        border-radius: 14px;
+    }
+}
 
 
 .about-me-title{
@@ -51,6 +57,59 @@
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-weight: 200;
-    font-size: 12;
+    font-size: 12px;
     padding-top: 8px;
+}
+
+
+// mobile stuff\
+
+.mobile{
+    .about-me-title-wrapper{
+        .about-me-title{
+            font-size: 80px;
+        }
+        .name-header{
+            font-size: 60px;
+        }
+    }
+
+    .canyon-photo-wrapper{
+        img{
+            height: 350px;
+        }
+    }
+    .ysanne-photo-wrapper{
+        display: flex;
+        flex-direction: column;
+        img{
+            height: 350px;
+            align-self: center;
+        }
+    }
+    .photo-caption{
+        font-size: 12px;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-me-content{
+        font-size: 16px;
+    }
+
+    .wake-surf-photo-wrapper{
+        display: flex;
+        flex-direction: column;
+        img{
+            height: 250px;
+            align-self: center;
+        }
+    }
+
+    .first-day-photo-wrapper{
+        img{
+            height: 400px;
+        }
+    }
 }
