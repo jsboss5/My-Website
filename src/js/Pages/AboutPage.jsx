@@ -85,7 +85,7 @@ const AboutPage = ({
         columnTwo=
         {
           <div className="about-me-content-one-wrapper">
-            <h2 className="subtitle">Who am I ?</h2>
+            <h2 className="subtitle">who am I ?</h2>
             <p className="about-me-content">
               I am a current Senior at Duke University where I enjoy studying Computer Science and Mathematics. Experienced in software engineering, applied machine learning, and product management, I am always looking for ways to leverage technology for social innovation. At Duke, I spends my time in a few unique areas. I help lead the Duke Applied Machine Learning Group (DAML), a project based undergraduate tech organization focused on brining machine learning to small businesses. In addition to running DAML, I TA for CS classes and help run Duke's undergraduate Special Olympics chapter which holds annual flag football and basketball leagues with local Special Olympics athletes.
             </p>
@@ -97,7 +97,7 @@ const AboutPage = ({
         columnOne=
         {
           <div className="about-me-content-one-wrapper">
-            <h2 className="subtitle">What am I up to?</h2>
+            <h2 className="subtitle">what am I up to?</h2>
             <p className="about-me-content">
               A lot - This summer I've been super busy! I'm currently located in NYC where I am finishing up my software engineering internship with Yext. At Yext, I've been working on the answers team, which brings an AI quality search experience to the enterprise. I've primarily worked on full stack features for end users who configure and optimize their company's search experience. At Yext, I'm treated like a full time engineer and own features through their entire lifecycle. Just two weeks ago, two new features I independently implemented were released to be used by millions of end users.
             </p>
@@ -131,7 +131,7 @@ const AboutPage = ({
         columnTwo=
         {
           <div className="about-me-content-one-wrapper">
-            <h2 className="subtitle">What am I into ?</h2>
+            <h2 className="subtitle">what am I into ?</h2>
               <p className="about-me-content">
                 Outside of school and work, I have a number of different passions and interests in a variety of areas. Whether it's surfing, running, lifting, or pickup basketball, I love to stay active. In addition, I've played piano my entire life and recently discovered a new found passion for jazz music and improvisation. I've recently become obsessed with poker and have always been a die hard Miami sports fan.
               </p>

@@ -11,10 +11,15 @@
 .about-me-title{
     font-size: 140px;
     color: $orange1;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
 }
 
 .name-header {
     font-size: 80px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+
     &.mobile{
         text-align: center;
         padding-bottom: 20px;

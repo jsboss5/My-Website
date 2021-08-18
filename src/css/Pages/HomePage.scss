@@ -33,19 +33,32 @@
   }
 }
 
-//   un comment this to change css for mobile stuff.
-// .mobile{
-//   .title-section{
-//     h1{
-//       font-size: 50px;
-//     }
-//   }
-//   .profile-photo{
-//     img{
-//       height: 300px;
-//     }
-//   }
-// }
+ // un comment this to change css for mobile stuff.
+.mobile{
+  .title-section{
+    h1{
+      font-size: 70px;
+    }
+    .subtitle{
+      font-size: 40px;
+    }
+  }
+  .profile-photo{
+    img{
+      height: 300px;
+    }
+  }
+
+  .about-me{
+    .personal-blurb{
+      font-size: 16px;
+    }
+    .subtitle{
+      font-size: 30px;
+    }
+  }
+
+}
 
 .side-profile{
   height: 100%;
@@ -75,4 +88,12 @@
   font-family: "Nunito", sans-serif;
   font-weight: 200;
   color: $orange1;
+}
+
+.mobile{
+  .side-profile{
+    img{
+      height: 250px;
+    }
+  }
 }

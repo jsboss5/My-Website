@@ -20,6 +20,11 @@
       &.mobile{
         flex-direction: column;
         align-items: center;
+
+      & > div {
+          padding-top: 0px;
+      }
+
       }
 
       & > div {
