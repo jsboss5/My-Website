@@ -213,7 +213,7 @@ const PortfolioPage = ({navMobThresh}) => {
               isMobile={isMobile}
               disableHover={true}
               columnOne={
-                  <div className="company-logo-wrapper bloons">
+                  <div className="company-logo-wrapper bloons-pic">
                     <img src={BloonsLogo} alt="bloons"/>
                   </div>
               }
@@ -242,7 +242,7 @@ const PortfolioPage = ({navMobThresh}) => {
               isMobile={isMobile}
               disableHover={true}
               columnOne={
-                  <div className="company-logo-wrapper">
+                  <div className="company-logo-wrapper phoenix-pic">
                     <img src={PhoenixLogo} alt="phnx"/>
                   </div>
               }
