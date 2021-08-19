@@ -155,7 +155,7 @@ export default function App() {
         </Route>
         <Route
           render={()=>
-            <HomePage 
+            <HomePage
               navMobThresh={NAV_MOBILE_THRESH}
               onLearnMore={()=>setCurrentPageSelected(pages.ABOUT)}
             />}
