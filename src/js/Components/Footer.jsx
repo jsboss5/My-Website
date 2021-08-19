@@ -18,7 +18,6 @@ const[isMobile, setIsMobile] = React.useState(window.innerWidth<MOBILE_THRESH);
 
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-        console.log(isMobile);
         setIsMobile(window.innerWidth < MOBILE_THRESH);
      // }
     }, false);

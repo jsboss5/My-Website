@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.33badf87.chunk.css",
-    "main.js": "/static/js/main.74e8eaa2.chunk.js",
-    "main.js.map": "/static/js/main.74e8eaa2.chunk.js.map",
+    "main.js": "/static/js/main.22cfd195.chunk.js",
+    "main.js.map": "/static/js/main.22cfd195.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8e8e661a.js",
     "runtime-main.js.map": "/static/js/runtime-main.8e8e661a.js.map",
-    "static/js/2.6c5cacf2.chunk.js": "/static/js/2.6c5cacf2.chunk.js",
-    "static/js/2.6c5cacf2.chunk.js.map": "/static/js/2.6c5cacf2.chunk.js.map",
+    "static/js/2.56d87310.chunk.js": "/static/js/2.56d87310.chunk.js",
+    "static/js/2.56d87310.chunk.js.map": "/static/js/2.56d87310.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.33badf87.chunk.css.map": "/static/css/main.33badf87.chunk.css.map",
-    "static/js/2.6c5cacf2.chunk.js.LICENSE.txt": "/static/js/2.6c5cacf2.chunk.js.LICENSE.txt",
+    "static/js/2.56d87310.chunk.js.LICENSE.txt": "/static/js/2.56d87310.chunk.js.LICENSE.txt",
     "static/media/aryeo_logo.7ca760e7.png": "/static/media/aryeo_logo.7ca760e7.png",
     "static/media/main.scss": "/static/media/background-bricks-light.3c24d232.svg",
     "static/media/best-piano.cbffa8b9.png": "/static/media/best-piano.cbffa8b9.png",
@@ -31,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8e8e661a.js",
-    "static/js/2.6c5cacf2.chunk.js",
+    "static/js/2.56d87310.chunk.js",
     "static/css/main.33badf87.chunk.css",
-    "static/js/main.74e8eaa2.chunk.js"
+    "static/js/main.22cfd195.chunk.js"
   ]
 }

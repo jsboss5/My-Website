@@ -33,7 +33,6 @@ const InterestsPage = ({navMobThresh}) => {
   //  resize listener
   const onWindowChange = () => {
     window.addEventListener('resize', () => {
-      console.log(window.innerWidth);
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
         setNavIsMobile(window.innerWidth < navMobThresh);

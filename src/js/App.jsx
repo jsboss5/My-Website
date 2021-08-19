@@ -27,8 +27,10 @@ export default function App() {
     //  use the current url to determine the initial page. This is used for highlighting the proper nav title.
     let startingPage = "";
     //  get rid of the first forward slash.
-    const currentURLExtension = window.location.pathname.substr(1);
-    //  Switch statement determines initial selected page. THis is only necessary to make sure url is correct. Might just replace with the one line solution
+    //  this one right below is for if I change from hashHistory to BrowserHistory
+    //const currentURLExtension = window.location.pathname.substr(1);
+    const currentURLExtension = window.location.hash.substr(2);
+    //  Switch statement determines initial selected page. THis is only necessary to make sure url is correct. Might just //replace with the one line solution
     switch(currentURLExtension){
       case pages.HOME:
         startingPage = pages.HOME;
