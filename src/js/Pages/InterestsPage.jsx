@@ -98,7 +98,7 @@ const InterestsPage = ({navMobThresh}) => {
           {
             <div className="content-description-text">
                 <h2 className="subtitle">musician at heart</h2>
-                <p>I started playing piano when I was 8 years old after begging my parents to get me lessons. We lived by a local music store and my mom would always take me there to kill time. I majored in piano at public arts magnet schools in both middle and high school where I was classically trained. In class, I had 1-2 hours of practice time per day, and had opportunities to arrange and perform music in front of large audiences. Since coming to Duke, I've fallen in love with Jazz music, and started taking lessons with a local jazz pianist. I'm heavily influenced by some of the great jazz pianists like Oscar Peterson and Wynton Kelly. </p>
+                <p>I started playing piano when I was 8 years old after begging my parents to get me lessons. We lived by a local music store and my mom would always take me there to kill time. I majored in piano at public arts magnet schools in both middle and high school where I was classically trained. In class, I had 1-2 hours of practice time per day and had opportunities to arrange and perform music in front of large audiences. Since coming to Duke, I've fallen in love with Jazz music and started taking lessons with a local jazz pianist. I'm heavily influenced by some of the great jazz pianists like Oscar Peterson and Wynton Kelly. </p>
             </div>
           }
       />
@@ -108,7 +108,7 @@ const InterestsPage = ({navMobThresh}) => {
           {
             <div className="content-description-text">
                 <h2 className="subtitle">food food food</h2>
-                <p> Over the past year I've gotten super into cooking and baking. Some of my favorites to make are burgers, salmon, tostones, and even chicken and waffles! Over quarantine, I, like everyone else, got really into baking sourdough breads. Throughout the year, I've tried my hand at learaning all different types of cuisine. I always make sure to include some vegetables though, as evidenced by the barely visible piece of cawliflower at the bottom of the adjacent photo.</p>
+                <p> Over the past year I've gotten super into cooking and baking. Some of my favorites to make are burgers, salmon, tostones, and even chicken and waffles! Over quarantine, I, like everyone else, got really into baking sourdough bread. Throughout the year, I've tried my hand at learning all different types of cuisine. I always make sure to include some vegetables though, as evidenced by the barely visible piece of cauliflower at the bottom of the adjacent photo.</p>
             </div>
           }
         columnTwo=
@@ -116,7 +116,7 @@ const InterestsPage = ({navMobThresh}) => {
             <div className={"food-photo " + realMobileClass}>
               <img src={ChickenWaffles} alt="fishing"/>
 
-              <p className="photo-caption">chicken and waffles (and cawliflower)</p>
+              <p className="photo-caption">chicken and waffles (and cauliflower)</p>
             </div>
           }
       />

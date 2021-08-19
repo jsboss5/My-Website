@@ -96,7 +96,7 @@ const AboutPage = ({
           <div className="about-me-content-one-wrapper">
             <h2 className="subtitle">who am I ?</h2>
             <p className="about-me-content">
-              I am a current Senior at Duke University where I enjoy studying Computer Science and Mathematics. Experienced in software engineering, applied machine learning, and product management, I am always looking for ways to leverage technology for social innovation. At Duke, I spends my time in a few unique areas. I help lead the Duke Applied Machine Learning Group (DAML), a project based undergraduate tech organization focused on brining machine learning to small businesses. In addition to running DAML, I TA for CS classes and help run Duke's undergraduate Special Olympics chapter which holds annual flag football and basketball leagues with local Special Olympics athletes.
+              I am a current Senior at Duke University where I enjoy studying Computer Science and Mathematics. Experienced in software engineering, applied machine learning, and product management, I am always looking for ways to leverage technology for social innovation. At Duke, I spend my time in a few unique areas. I help lead the Duke Applied Machine Learning Group (DAML), a project-based undergraduate tech organization focused on bringing machine learning to small businesses. In addition to running DAML, I TA for CS classes and help run Duke's undergraduate Special Olympics chapter which holds annual flag football and basketball leagues with local Special Olympics athletes.
             </p>
           </div>
         }
@@ -108,11 +108,11 @@ const AboutPage = ({
           <div className="about-me-content-one-wrapper">
             <h2 className="subtitle">what am I up to?</h2>
             <p className="about-me-content">
-              A lot - This summer I've been super busy! I'm currently located in NYC where I am finishing up my software engineering internship with Yext. At Yext, I've been working on the answers team, which brings an AI quality search experience to the enterprise. I've primarily worked on full stack features for end users who configure and optimize their company's search experience. At Yext, I'm treated like a full time engineer and own features through their entire lifecycle. Just two weeks ago, two new features I independently implemented were released to be used by millions of end users.
+              A lot - This summer I've been super busy! I'm currently located in NYC where I am finishing up my software engineering internship with Yext. At Yext, I've been working on the answers team, which brings an AI quality search experience to the enterprise. I've primarily worked on full-stack features for end-users who configure and optimize their company's search experience. At Yext, I'm treated like a full-time engineer and own features through their entire lifecycle. Just two weeks ago, two new features I independently implemented were released to be used by millions of end-users.
             </p>
             <br/>
             <p className="about-me-content">
-              In addition to working at Yext, I have been running the Phoenix Project, a program sponsered by the Duke Applied Machine Learning group which matches Duke students to technical projects and internships provided by various startups and Duke Professors. I've taken care of the whole thing, from contracts and 1099s to project matching and planning. I've also recently joined a software consulting startup called ApolloEndeavors as the Personel Director.
+              In addition to working at Yext, I have been running the Phoenix Project, a program sponsored by the Duke Applied Machine Learning group which matches Duke students to technical projects and internships provided by various startups and Duke Professors. I've taken care of the whole thing, from contracts and 1099s to project matching and planning. I've also recently joined a software consulting startup called ApolloEndeavors as the Personnel Director.
             </p>
           </div>
         }
