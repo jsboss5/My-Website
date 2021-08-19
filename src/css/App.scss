@@ -1,5 +1,8 @@
 @import './colors.scss';
 
+.application-container{
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;

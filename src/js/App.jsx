@@ -139,7 +139,7 @@ export default function App() {
 
 
   return (
-    <div>
+    <div className="application-container">
       <NavigationBar
         navDropDownCallback={dropDownNav}
         navIsDroppedGetter={navIsDroppedGetter}
