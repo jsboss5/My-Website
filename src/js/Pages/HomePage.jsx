@@ -86,7 +86,7 @@ const HomePage = ({
                 about me
               </h2>
               <p className="personal-blurb">
-                I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of society's greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around to learn more about my experience, interests, and goals!
+                I'm a senior at Duke University studying Computer Science and Math. I'm passionate about building technology that tackles some of society's greatest problems. Some of my primary areas of interest include making AI solutions more ethical, equitable, and accessible to everyone. Take a poke around my custom built React website to learn more about my experience, interests, and goals!
               </p>
               <ButtonComponent
                 text='learn more!'
