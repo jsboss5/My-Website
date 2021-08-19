@@ -6,6 +6,7 @@ export default function DropDownSection({
     isOpen,
     content,
     isMobile,
+    isRealMobile,
     }){
 
     const [headerOpen, setHeaderOpen] = React.useState(isOpen);
@@ -15,10 +16,11 @@ export default function DropDownSection({
     };
 
     const mobileClass = isMobile ? 'mobile-drop-down' : '';
+    const realMobileClass = isRealMobile ? 'real-mobile-drop-down' : '';
 
     const iconClass = headerOpen ? "carrot-icon opened" : "carrot-icon closed";
     return(
-        <div className={mobileClass}>
+        <div className={mobileClass + ' ' + realMobileClass}>
             <div
                 className="drop-down-header-container"
                 onClick={onHeaderClick}

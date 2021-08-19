@@ -14,13 +14,20 @@ const HomePage = ({
   onLearnMore,
 }) => {
   const MOBILE_THRESH = 900;
+  const REAL_MOBILE_THRESH = 500;
+
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [isRealMobile, setIsRealMobile] =
+    React.useState(window.innterWidth<REAL_MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
 
-    //  creates histoory object to be used for button callback
-    const history = useHistory();
+  //  this is css class for actual mobile phone
+  const realMobileClass = isRealMobile ? 'real-mobile' : '';
+
+  //  creates histoory object to be used for button callback
+  const history = useHistory();
 
   //  makes sure component is mounted before changing state.
   const componentIsMounted = React.useRef(true)
@@ -36,6 +43,7 @@ const HomePage = ({
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
         setNavIsMobile(window.innerWidth < navMobThresh);
+        setIsRealMobile(window.innerWidth< REAL_MOBILE_THRESH);
       }
     }, false);
   };
@@ -44,6 +52,7 @@ const HomePage = ({
   //  when link is clicked it scrolls to top and resizes if necessary
   React.useEffect(()=> window.scrollTo(0,0), []);
   React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+  React.useEffect(()=> setIsRealMobile(window.innerWidth < REAL_MOBILE_THRESH), []);
 
 
   return (
@@ -60,7 +69,7 @@ const HomePage = ({
           }
         columnTwo=
           {
-            <div className="title-section">
+            <div className={"title-section " + realMobileClass}>
               <h1>hi, i'm josh</h1>
               <h2 className="subtitle">
                 software engineer
@@ -90,7 +99,7 @@ const HomePage = ({
           }
         columnTwo=
         {
-          <div className="side-profile">
+          <div className={"side-profile " + realMobileClass}>
             <img src={SidePhoto} alt="side-pic" />
           </div>
         }

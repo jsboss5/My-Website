@@ -14,10 +14,15 @@
 .interests-title{
     h1{
         font-size: 140px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+
     }
 
     h2{
         font-size: 80px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 200;
     }
 
 }
@@ -66,11 +71,28 @@
         img{
             height: 300px;
         }
+        &.real-mobile{
+            img{
+                height: 225px;
+            }
+        }
     }
 
     .performance-photo{
         img{
             height: 225px;
+        }
+        &.real-mobile{
+            img{
+                height: 200px;
+            }
+        }
+    }
+    .food-photo{
+        &.real-mobile{
+            img{
+                height: 250px;
+            }
         }
     }
     .interests-title{
@@ -80,6 +102,14 @@
 
         h2{
             font-size: 60px;
+        }
+        &.real-mobile{
+            h1{
+                font-size: 80px;
+            }
+            h2{
+                font-size: 40px;
+            }
         }
     }
 

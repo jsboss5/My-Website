@@ -181,7 +181,9 @@ export default function App() {
           />
       </Switch>
       <SocialMediaSection/>
-      <Footer changePageOnClick={setCurrentPageSelected}/>
+      <Footer
+        changePageOnClick={setCurrentPageSelected}
+        />
     </div>
   );
 };

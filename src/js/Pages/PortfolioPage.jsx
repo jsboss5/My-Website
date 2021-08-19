@@ -13,10 +13,13 @@ import "../../css/main.scss";
 
 const PortfolioPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1000;
+  const REAL_MOBILE_THRESH = 500;
   const RESUME_PATH = 'files/website-resume.pdf';
 
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [isRealMobile, setIsRealMobile] =
+    React.useState(window.innterWidth<REAL_MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
 
@@ -33,9 +36,14 @@ const PortfolioPage = ({navMobThresh}) => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
         setNavIsMobile(window.innerWidth < navMobThresh);
+        setIsRealMobile(window.innerWidth< REAL_MOBILE_THRESH);
       }
     }, false);
   };
+
+  //  this is css class for actual mobile phone
+  const realMobileClass = isRealMobile ? 'real-mobile' : '';
+
   React.useEffect(onWindowChange, [navMobThresh]);
 
   const nameMobileClass = isMobile ? 'mobile' : '';
@@ -43,6 +51,7 @@ const PortfolioPage = ({navMobThresh}) => {
   //  on load it makes sure links to top and resizes if necessary;
   React.useEffect(()=> window.scrollTo(0,0), []);
   React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+  React.useEffect(()=> setIsRealMobile(window.innerWidth < REAL_MOBILE_THRESH), []);
 
   return (
     <section className="page-container">
@@ -52,7 +61,7 @@ const PortfolioPage = ({navMobThresh}) => {
         disableHover={navIsMobile}
         columnOne=
           {
-            <div className="work-title-text-wrapper">
+            <div className={"work-title-text-wrapper "+ realMobileClass}>
               <h1>work portfolio</h1>
               <div className={"download-resume-wrapper " + nameMobileClass}>
                 <ButtonComponent
@@ -64,7 +73,7 @@ const PortfolioPage = ({navMobThresh}) => {
           }
         columnTwo=
           {
-            <div className="work-title-photo-wrapper">
+            <div className={"work-title-photo-wrapper " + realMobileClass}>
               <img src={NYC} alt="cityScape"/>
             </div>
           }
@@ -74,6 +83,7 @@ const PortfolioPage = ({navMobThresh}) => {
         text="work experience"
         isOpen={true}
         isMobile={isMobile}
+        isRealMobile={isRealMobile}
         content =
         {
           <div className="drop-down-content-wrapper">
@@ -145,6 +155,7 @@ const PortfolioPage = ({navMobThresh}) => {
         text="campus leadership"
         isOpen={true}
         isMobile={isMobile}
+        isRealMobile={isRealMobile}
         content =
         {
           <div className="drop-down-content-wrapper">
@@ -208,6 +219,7 @@ const PortfolioPage = ({navMobThresh}) => {
         text="featured projects"
         isOpen={true}
         isMobile={isMobile}
+        isRealMobile={isRealMobile}
         content =
         {
           <div className="drop-down-content-wrapper">

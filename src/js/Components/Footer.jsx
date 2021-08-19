@@ -2,8 +2,12 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "../../css/main.scss";
 
-export default function Footer({changePageOnClick}){
+export default function Footer({
+    changePageOnClick,
+}){
 
+const MOBILE_THRESH = 600;
+const[isMobile, setIsMobile] = React.useState(window.innerWidth<MOBILE_THRESH);
 //  enum for page types coppied from App.jsx
     const pages = {
         HOME: "home",
@@ -12,9 +16,20 @@ export default function Footer({changePageOnClick}){
         WORK: "experience"
   };
 
+  const onWindowChange = () => {
+    window.addEventListener('resize', () => {
+        console.log(isMobile);
+        setIsMobile(window.innerWidth < MOBILE_THRESH);
+     // }
+    }, false);
+  };
+  React.useEffect(onWindowChange);
+
+  const mobileClass = isMobile ? 'mobile-footer' : '';
+
     return (
         //  see navbar.scss for more styling
-        <div className="footer-container">
+        <div className={"footer-container " + mobileClass}>
             <div className="nav-content-box-wrapper">
                 <div className="wide-nav-content-box-container">
                     <ul className="nav-content-box">

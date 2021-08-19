@@ -42,6 +42,17 @@
     .subtitle{
       font-size: 40px;
     }
+
+    &.real-mobile{
+      h1{
+        text-align: center;
+        font-size: 60px;
+      }
+      .subtitle{
+        text-align:center;
+        font-size: 30px;
+      }
+    }
   }
   .profile-photo{
     img{
@@ -94,6 +105,11 @@
   .side-profile{
     img{
       height: 250px;
+    }
+    &.real-mobile{
+      img{
+        height: 200px !important;
+      }
     }
   }
 }

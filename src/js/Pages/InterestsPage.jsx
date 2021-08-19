@@ -10,10 +10,16 @@ import "../../css/main.scss";
 
 const InterestsPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1100;
+  const REAL_MOBILE_THRESH = 500;
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [isRealMobile, setIsRealMobile] =
+    React.useState(window.innterWidth<REAL_MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
+
+  //  this is css class for actual mobile phone
+  const realMobileClass = isRealMobile ? 'real-mobile' : '';
 
   //  responsible for change to mobile view
   //  makes sure component is mounted before changing state.
@@ -31,6 +37,7 @@ const InterestsPage = ({navMobThresh}) => {
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
         setNavIsMobile(window.innerWidth < navMobThresh);
+        setIsRealMobile(window.innerWidth< REAL_MOBILE_THRESH);
       }
     }, false);
   };
@@ -39,6 +46,7 @@ const InterestsPage = ({navMobThresh}) => {
   //  when link is clicked it scrolls to top and resize if necessary.
   React.useEffect(()=> window.scrollTo(0,0), []);
   React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+  React.useEffect(()=> setIsRealMobile(window.innerWidth < REAL_MOBILE_THRESH), []);
 
   return (
     <section className="page-container">
@@ -54,7 +62,7 @@ const InterestsPage = ({navMobThresh}) => {
           }
         columnTwo=
           {
-              <div className="interests-title">
+              <div className={"interests-title " + realMobileClass }>
                 <h2 className="subtitle">my</h2>
                 <h1>interests</h1>
               </div>
@@ -71,7 +79,7 @@ const InterestsPage = ({navMobThresh}) => {
           }
         columnTwo=
           {
-            <div className="fishing-photo">
+            <div className={"fishing-photo " + realMobileClass}>
               <img src={Fishing} alt="fishing"/>
               <p className="photo-caption">me, fishing the jupiter inlet</p>
             </div>
@@ -81,7 +89,7 @@ const InterestsPage = ({navMobThresh}) => {
         isMobile = {isMobile}
         columnOne=
           {
-            <div className="performance-photo">
+            <div className={"performance-photo " + realMobileClass}>
               <img src={PianoPerformance} alt="fishing"/>
               <p className="photo-caption">practicing my senior recital piece, khachaturian toccata, before the concert</p>
             </div>
@@ -105,7 +113,7 @@ const InterestsPage = ({navMobThresh}) => {
           }
         columnTwo=
           {
-            <div className="food-photo">
+            <div className={"food-photo " + realMobileClass}>
               <img src={ChickenWaffles} alt="fishing"/>
 
               <p className="photo-caption">chicken and waffles (and cawliflower)</p>

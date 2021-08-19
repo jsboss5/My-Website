@@ -75,10 +75,20 @@
         h1{
             font-size: 80px;
         }
+        &.real-mobile{
+            h1{
+                font-size: 60px;
+            }
+        }
     }
     .work-title-photo-wrapper{
         img{
             height: 250px;
+        }
+        &.real-mobile{
+            img{
+                height: 220px;
+            }
         }
     }
     .company-logo-wrapper{

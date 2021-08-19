@@ -16,10 +16,17 @@ const AboutPage = ({
   onLearnMore,
   }) => {
   const MOBILE_THRESH = 1000;
+  const REAL_MOBILE_THRESH = 500;
+
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
+  const [isRealMobile, setIsRealMobile] =
+    React.useState(window.innterWidth<REAL_MOBILE_THRESH);
   const [navIsMobile, setNavIsMobile] =
     React.useState(window.innerWidth<navMobThresh);
+
+  //  this is css class for actual mobile phone
+  const realMobileClass = isRealMobile ? 'real-mobile' : '';
 
   // create history object for button to interests page
   const history = useHistory();
@@ -37,6 +44,7 @@ const AboutPage = ({
       if(componentIsMounted.current){
         setIsMobile(window.innerWidth < MOBILE_THRESH);
         setNavIsMobile(window.innerWidth < navMobThresh);
+        setIsRealMobile(window.innerWidth< REAL_MOBILE_THRESH);
       }
     }, false);
   };
@@ -47,6 +55,7 @@ const AboutPage = ({
   //  on load it makes sure links to top and resizes if necessary;
   React.useEffect(()=> window.scrollTo(0,0), []);
   React.useEffect(()=> setIsMobile(window.innerWidth < MOBILE_THRESH), []);
+  React.useEffect(()=> setIsRealMobile(window.innerWidth < REAL_MOBILE_THRESH), []);
 
   return (
     <section className="page-container">
@@ -55,7 +64,7 @@ const AboutPage = ({
         isMobile={isMobile}
         columnOne =
           {
-            <div className="about-me-title-wrapper">
+            <div className={"about-me-title-wrapper " + realMobileClass}>
               <h1 className="about-me-title">
                 about me
               </h1>
