@@ -2,8 +2,8 @@ import React from "react";
 import { useHistory } from 'react-router-dom'
 
 import ContentSection from "../Components/ContentSection";
-import SidePhoto from "../../images/side-profile-bridge.jpeg";
-import NewProfile from "../../images/new_profile.png";
+import SidePhoto from "../../images/side-profile-bridge.jpg";
+import NewProfile from "../../images/new_profile.jpg";
 import ButtonComponent from "../Components/ButtonComponent";
 
 

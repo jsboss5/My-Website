@@ -4,7 +4,7 @@ import ButtonComponent from "../Components/ButtonComponent";
 import {useHistory} from 'react-router-dom';
 import WithYsanne from "../../images/with-ysanne.jpg";
 import FirstDay from "../../images/first-day-of-work.jpg";
-import MainPhoto from "../../images/in-the-canyon.jpeg";
+import MainPhoto from "../../images/in-the-canyon.jpg";
 import WakeSurf from "../../images/wake-surf-photo.jpg"
 
 

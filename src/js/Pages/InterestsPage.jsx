@@ -2,9 +2,9 @@ import React  from "react";
 
 import ContentSection from "../Components/ContentSection";
 import Piano from "../../images/best-piano.png";
-import Fishing from "../../images/fishing.png"
+import Fishing from "../../images/fishing.jpg"
 import ChickenWaffles from "../../images/chicken-and-waffles.jpg";
-import PianoPerformance from "../../images/piano-performance.png";
+import PianoPerformance from "../../images/piano-performance.jpg";
 
 import "../../css/main.scss";
 
