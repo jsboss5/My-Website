@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.33badf87.chunk.css",
-    "main.js": "/static/js/main.48f17e14.chunk.js",
-    "main.js.map": "/static/js/main.48f17e14.chunk.js.map",
+    "main.js": "/static/js/main.47388b71.chunk.js",
+    "main.js.map": "/static/js/main.47388b71.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8e8e661a.js",
     "runtime-main.js.map": "/static/js/runtime-main.8e8e661a.js.map",
     "static/js/2.56d87310.chunk.js": "/static/js/2.56d87310.chunk.js",
@@ -19,10 +19,10 @@
     "static/media/first-day-of-work.544acba1.jpg": "/static/media/first-day-of-work.544acba1.jpg",
     "static/media/fishing.24d3cff6.jpg": "/static/media/fishing.24d3cff6.jpg",
     "static/media/in-the-canyon.d08f1529.jpg": "/static/media/in-the-canyon.d08f1529.jpg",
-    "static/media/new_profile.f6d03cef.jpg": "/static/media/new_profile.f6d03cef.jpg",
     "static/media/nyc-scape.449f55de.jpg": "/static/media/nyc-scape.449f55de.jpg",
     "static/media/phoenix-logo.daba2437.png": "/static/media/phoenix-logo.daba2437.png",
     "static/media/piano-performance.1e73799a.jpg": "/static/media/piano-performance.1e73799a.jpg",
+    "static/media/professional-headshot-website.1ca370f3.jpg": "/static/media/professional-headshot-website.1ca370f3.jpg",
     "static/media/side-profile-bridge.3163f2ae.jpg": "/static/media/side-profile-bridge.3163f2ae.jpg",
     "static/media/special-olympics-logo.26c96463.png": "/static/media/special-olympics-logo.26c96463.png",
     "static/media/wake-surf-photo.689c522a.jpg": "/static/media/wake-surf-photo.689c522a.jpg",
@@ -33,6 +33,6 @@
     "static/js/runtime-main.8e8e661a.js",
     "static/js/2.56d87310.chunk.js",
     "static/css/main.33badf87.chunk.css",
-    "static/js/main.48f17e14.chunk.js"
+    "static/js/main.47388b71.chunk.js"
   ]
 }
