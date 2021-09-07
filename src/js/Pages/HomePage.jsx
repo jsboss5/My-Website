@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 
 import ContentSection from "../Components/ContentSection";
 import SidePhoto from "../../images/side-profile-bridge.jpg";
-import NewProfile from "../../images/new_profile.jpg";
+import NewProfile from "../../images/professional-headshot-website.jpg";
 import ButtonComponent from "../Components/ButtonComponent";
 
 
