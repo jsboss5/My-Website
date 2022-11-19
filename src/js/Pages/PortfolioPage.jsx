@@ -14,7 +14,7 @@ import "../../css/main.scss";
 const PortfolioPage = ({navMobThresh}) => {
   const MOBILE_THRESH = 1000;
   const REAL_MOBILE_THRESH = 500;
-  const RESUME_PATH = 'files/website-resume.pdf';
+  const RESUME_PATH = 'files/resume_november-2022.pdf';
 
   const [isMobile, setIsMobile] =
     React.useState(window.innerWidth<MOBILE_THRESH);
