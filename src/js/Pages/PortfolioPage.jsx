@@ -94,15 +94,15 @@ const PortfolioPage = ({navMobThresh}) => {
               disableHover={true}
               columnOne={
                   <div className="company-logo-wrapper">
-                    <img src={MetaLogo} alt="yext"/>
+                    <img src={MetaLogo} alt="meta"/>
                   </div>
               }
               columnTwo={
                   <div className="experience-description-text-wrapper" >
-                    <h1 className="company-text">yext</h1>
+                    <h1 className="company-text">meta</h1>
 
                     <h2 className="experience-title-text">
-                      software engineering intern <span className="dates">(summer 2021)</span>
+                      software engineer <span className="dates">(september 2022 - november 2022)</span>
                     </h2>
                     <p className="experience-description-text">
                       I started full time at Meta in their NYC office in September of 2022. Although I was only afforded the opportunity to work there for a few months, I learned a ton and made a substantial impact on the teams I worked with. Over the course of my time at Meta, I completed multiple projects across product, mobile, and infrastructure teams, partnering with a number of different engineers and engineering managers. Due to a hiring freeze instituted only a week into my job, I was in “engineering bootcamp” for the entirety of my time there. This meant that I wasn’t placed on a team, and instead had to search for things to work on myself. Luckily, I relentlessly sought out work I was interested in, and I learned a ton as a result. Despite my best efforts though, they unfortunately let me go in early November. They dissapointingly let go the entire new grad cohort without looking into anyone’s performance. Oh well.  

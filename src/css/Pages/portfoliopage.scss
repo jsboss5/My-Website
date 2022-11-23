@@ -68,6 +68,14 @@
             font-weight: 600;
         }
     }
+    .experience-description-text{
+        a{
+            color: inherit;
+            &:hover{
+                color: $orange1;
+            }
+        }
+    }
 }
 
 .mobile{
