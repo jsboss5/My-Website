@@ -134,7 +134,7 @@ const PortfolioPage = ({navMobThresh}) => {
                       software engineering intern <span className="dates">(summer 2021)</span>
                     </h2>
                     <p className="experience-description-text">
-                      This summer, I had the incredible opportunity to work as a Software Engineering Intern at Yext, a B2B software company focused on helping people find the information they're looking for on the internet. I worked on Yexts' new flagship product called Answers, which brings google quality search to the enterprise. By using Answers, companies can provide an AI and NLP-driven search experience to their users hosted on their own individual platforms. With my interest in ML, it was a natural fit for me to work on this cutting-edge technology. I interned on a 4-person full stack team called Juno, which owns the platform used by the answers administrators (representatives from a client company who configure and monitor the search experience).
+                      Last summer, I had the incredible opportunity to work as a Software Engineering Intern at Yext, a B2B software company focused on helping people find the information they're looking for on the internet. I worked on Yexts' new flagship product called Answers, which brings google quality search to the enterprise. By using Answers, companies can provide an AI and NLP-driven search experience to their users hosted on their own individual platforms. With my interest in ML, it was a natural fit for me to work on this cutting-edge technology. I interned on a 4-person full stack team called Juno, which owns the platform used by the answers administrators (representatives from a client company who configure and monitor the search experience).
                     </p>
                     <br/>
                     <p className="experience-description-text">
@@ -203,7 +203,7 @@ const PortfolioPage = ({navMobThresh}) => {
                     <h1 className="company-text">duke applied machine learning</h1>
 
                     <h2 className="experience-title-text">
-                      director <span className="dates">(november 2020 - present)</span>
+                      director <span className="dates">(november 2020 - January 2022)</span>
                     </h2>
                     <p className="experience-description-text">
                       Duke Applied Machine Learning (DAML) is a group of undergraduate, master's, and Ph.D. students specializing in data science, machine learning, and software engineering. We provide various types of technical support for startups, fortune 500 companies, Duke professors, and even Duke students. While we've provided real value to many different clients, we also pride ourselves on being an education-first organization. We train young undergraduate students in contemporary industry technologies and concepts that they frankly can't get in the classroom. Many of our students apply having only taken 1 or 2 undergraduate CS courses. We train them in one of 4 tracks that most interests them: Software Engineering, Machine Learning / Data Science, Hardware Engineering, or Product Management. We then place them on a project team that we match to an interested client looking to build or improve their own platform. This provides real-world experience for students, and incredible (low cost) technical support for clients. In addition to our normal cohort which runs each semester, we also run the Duke Innovation Studio,  our own internal startup incubator, and Tech for Equity, an internship program matching technical students to nonprofits.
@@ -233,7 +233,7 @@ const PortfolioPage = ({navMobThresh}) => {
                   <div className="experience-description-text-wrapper" >
                     <h1 className="company-text">duke special olympics</h1>
                     <h2 className="experience-title-text">
-                      president <span className="dates">(april 2020 - present)</span>
+                      president <span className="dates">(april 2020 - May 2022)</span>
                     </h2>
                     <p className="experience-description-text">
                       Duke Special Olympics is Duke's chapter of the national nonprofit, Special Olympics. Special Olympics has the goal of giving individuals with physical and intellectual disabilites an opportunity to learn and grow through competing in various athletic endeavors. At Duke, we host what we call our Unified Sports League, an intramural type league that places Special Olympics athletes on teams with Duke students to compete in both Flag Football and Basketball. We also host health trainings monthly and coordinate other volunteer opportunities in the Durham county area for Duke students. We recently were just recognized as a Unifed Champion school, putting us in an elite class of only 100 universities in the world. During the pandemic, we had to change gears and host an online unified sports experience in which we met weekly and worked out together over zoom. Athletes and students always have a blast with Unified.
