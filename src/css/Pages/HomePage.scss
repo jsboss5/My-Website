@@ -91,6 +91,12 @@
   padding-bottom: 20px;
   .personal-blurb{
     padding-bottom: 20px;
+    a{
+      color: inherit;
+      &:hover{
+        color: $orange1;
+      }
+    }
   }
 }
 

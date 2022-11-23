@@ -86,7 +86,7 @@ const HomePage = ({
                 about me
               </h2>
               <p className="personal-blurb">
-                I'm a graduate of Duke University where I studied Computer Science and Math. Experienced in fullstack, infrastructure, and ML engineering, I'm passionate about building technology that helps people. Take a poke around my custom built React website to learn more about my experience, interests, and goals!
+                I'm a graduate of Duke University where I studied Computer Science and Math. Experienced in fullstack, infrastructure, and ML engineering, I'm passionate about building technology that helps people. Take a poke around my custom built React website to learn more about my experience, interests, and goals! Feel free to check the code for this site <a className="" href="https://github.com/jsboss5/My-Website/tree/dev">on my Github</a>. 
               </p>
               <ButtonComponent
                 text='learn more!'
