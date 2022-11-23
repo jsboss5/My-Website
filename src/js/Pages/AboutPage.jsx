@@ -4,6 +4,7 @@ import ButtonComponent from "../Components/ButtonComponent";
 import {useHistory} from 'react-router-dom';
 import WithYsanne from "../../images/with-ysanne.jpg";
 import FirstDay from "../../images/first-day-of-work.jpg";
+import FlorencePhoto from "../../images/florence_profile.jpg";
 import MainPhoto from "../../images/in-the-canyon.jpg";
 import WakeSurf from "../../images/wake-surf-photo.jpg"
 
@@ -96,7 +97,7 @@ const AboutPage = ({
           <div className="about-me-content-one-wrapper">
             <h2 className="subtitle">who am I ?</h2>
             <p className="about-me-content">
-              I am a recent Duke University graduate where I enjoyed studying Computer Science and Mathematics. Experienced in software engineering, applied machine learning, and product management, I am always looking for ways to leverage technology for social innovation. At Duke, I spent my time in a few unique areas. I helped lead the Duke Applied Machine Learning Group (DAML), a project-based undergraduate tech organization focused on bringing machine learning to small businesses. In addition to running DAML, I TA'd for CS classes and helped run Duke's undergraduate Special Olympics chapter which holds annual flag football and basketball leagues with local Special Olympics athletes.
+              I am a recent graduate of Duke University where I enjoyed studying Computer Science and Mathematics. Experienced in software engineering, applied machine learning, and product management, I am always looking for ways to leverage technology for social innovation. At Duke, I spent my time in a few unique areas. I helped lead the Duke Applied Machine Learning Group (DAML), a project-based undergraduate tech organization focused on bringing machine learning to small businesses. In addition to running DAML, I TA'd for CS classes and helped run Duke's undergraduate Special Olympics chapter which holds annual flag football and basketball leagues with local Special Olympics athletes. 
             </p>
           </div>
         }
@@ -108,20 +109,20 @@ const AboutPage = ({
           <div className="about-me-content-one-wrapper">
             <h2 className="subtitle">what am I up to?</h2>
             <p className="about-me-content">
-              A lot - This summer I've been super busy! I'm currently located in NYC where I am finishing up my software engineering internship with Yext. At Yext, I've been working on the answers team, which brings an AI quality search experience to the enterprise. I've primarily worked on full-stack features for end-users who configure and optimize their company's search experience. At Yext, I'm treated like a full-time engineer and own features through their entire lifecycle. Just two weeks ago, two new features I independently implemented were released to be used by millions of end-users.
+              A lot - Since graduating, I’ve been super busy! After school finished in May, I went on a mini tour of Europe with some friends where I explored a ton of new cities and cultures. My favorite spot was in the Azores, a small island chain off the coast of Portugal. I got to go surfing, hiking, and even learned to drive a manual car!
             </p>
             <br/>
             <p className="about-me-content">
-              In addition to working at Yext, I have been running the Phoenix Project, a program sponsored by the Duke Applied Machine Learning group which matches Duke students to technical projects and internships provided by various startups and Duke Professors. I've taken care of the whole thing, from contracts and 1099s to project matching and planning. I've also recently joined a software consulting startup called ApolloEndeavors as the Personnel Director.
+              After the endless summer finally ended in September, I started my job as a SWE at Meta (Facebook) in NYC. I learned so much, and met so many cool people in my first few months! Unfortunately, due to Meta’s mass layoffs, (they let go of all new joiners without performance review), I recently lost my job and am now on the hunt for new opportunities. I'm looking at the situation as an opportunity to find a company working on something I'm more excited about!
             </p>
           </div>
         }
         columnTwo=
         {
           <div className="first-day-photo-wrapper">
-            <img src={FirstDay} alt="side-pic" />
+            <img src={FlorencePhoto} alt="side-pic" />
             <p className="photo-caption">
-              Me on my first day of work at Yext!
+              Smiling my heart out in Florence!
             </p>
           </div>
         }
