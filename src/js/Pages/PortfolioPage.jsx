@@ -2,6 +2,7 @@ import React from "react";
 import ContentSection from "../Components/ContentSection";
 import DropDownSection from "../Components/DropDownSection";
 import NYC from '../../images/nyc-scape.jpg';
+import MetaLogo from '../../images/Meta_logo.png';
 import YextLogo from '../../images/yext-logo.png';
 import AryeoLogo from '../../images/aryeo_logo.png';
 import DamlLogo from '../../images/daml-logo.png';
@@ -87,6 +88,35 @@ const PortfolioPage = ({navMobThresh}) => {
         content =
         {
           <div className="drop-down-content-wrapper">
+             {/* Meta Job */}
+             <ContentSection
+              isMobile={isMobile}
+              disableHover={true}
+              columnOne={
+                  <div className="company-logo-wrapper">
+                    <img src={MetaLogo} alt="yext"/>
+                  </div>
+              }
+              columnTwo={
+                  <div className="experience-description-text-wrapper" >
+                    <h1 className="company-text">yext</h1>
+
+                    <h2 className="experience-title-text">
+                      software engineering intern <span className="dates">(summer 2021)</span>
+                    </h2>
+                    <p className="experience-description-text">
+                      I started full time at Meta in their NYC office in September of 2022. Although I was only afforded the opportunity to work there for a few months, I learned a ton and made a substantial impact on the teams I worked with. Over the course of my time at Meta, I completed multiple projects across product, mobile, and infrastructure teams, partnering with a number of different engineers and engineering managers. Due to a hiring freeze instituted only a week into my job, I was in “engineering bootcamp” for the entirety of my time there. This meant that I wasn’t placed on a team, and instead had to search for things to work on myself. Luckily, I relentlessly sought out work I was interested in, and I learned a ton as a result. Despite my best efforts though, they unfortunately let me go in early November. They dissapointingly let go the entire new grad cohort without looking into anyone’s performance. Oh well.  
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                    That said, there were a few main areas that I made an impact. The first was with the GraphQL Mobile Infrastructure team. I mostly worked on their service, “WhereIsSchema,” that was utilized by mobile engineers to track the progress of their GraphQL schema updates. I built multiple features for this service, including adding a widget displaying the correct infra on-call rotation for different Meta products. I also added metric tracking for their service from scratch, in order to track and categorize website visits and display them in time series dashboards. In addition to GraphQL Mobile, I also worked with the ML Ops team to improve ML pipeline reliability by writing A/B and unit tests for “Fookeep” their feature extraction service, and “FBLSim” a model diagnosis service. Lastly, I worked closely with the Instagram Originality team, which produces originality scores for instagram content in the hopes of reducing the proliferation of unoriginal (stolen) content on the platform. In particular, I added new functionality to their async backfilling system, which they use to score older content via their newest ML models. Despite the way it ended, I really enjoyed my time at Meta and learned so much. 
+                    </p>
+                  </div>
+              }
+            />
+             
+             
+             
              {/* Yext Internship */}
             <ContentSection
               isMobile={isMobile}

@@ -75,7 +75,7 @@ const[isMobile, setIsMobile] = React.useState(window.innerWidth<MOBILE_THRESH);
                     </ul>
                 </div>
             </div>
-            <h3 className="footer-stamp">Joshua Boss - 2021</h3>
+            <h3 className="footer-stamp">Joshua Boss - November, 2022</h3>
         </div>
 
     );
