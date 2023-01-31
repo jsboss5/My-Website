@@ -2,6 +2,7 @@ import React from "react";
 import ContentSection from "../Components/ContentSection";
 import DropDownSection from "../Components/DropDownSection";
 import NYC from '../../images/nyc-scape.jpg';
+import PalantirLogo from '../../images/palantir_logo.png';
 import MetaLogo from '../../images/Meta_logo.png';
 import YextLogo from '../../images/yext-logo.png';
 import AryeoLogo from '../../images/aryeo_logo.png';
@@ -88,6 +89,32 @@ const PortfolioPage = ({navMobThresh}) => {
         content =
         {
           <div className="drop-down-content-wrapper">
+             {/* Palantir Job */}
+             <ContentSection
+              isMobile={isMobile}
+              disableHover={true}
+              columnOne={
+                  <div className="company-logo-wrapper">
+                    <img src={PalantirLogo} alt="palantir"/>
+                  </div>
+              }
+              columnTwo={
+                  <div className="experience-description-text-wrapper" >
+                    <h1 className="company-text">palantir</h1>
+
+                    <h2 className="experience-title-text">
+                      forward deployed software engineer <span className="dates">(january 2023 - present)</span>
+                    </h2>
+                    <p className="experience-description-text">
+                      I just started my new role and am couldn't be more excited about it.
+                    </p>
+                    <br/>
+                    <p className="experience-description-text">
+                    </p>
+                  </div>
+              }
+            />
+
              {/* Meta Job */}
              <ContentSection
               isMobile={isMobile}
@@ -114,8 +141,6 @@ const PortfolioPage = ({navMobThresh}) => {
                   </div>
               }
             />
-             
-             
              
              {/* Yext Internship */}
             <ContentSection
