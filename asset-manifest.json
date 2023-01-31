@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ac3ad3ec.chunk.css",
-    "main.js": "/static/js/main.a9c1a212.chunk.js",
-    "main.js.map": "/static/js/main.a9c1a212.chunk.js.map",
+    "main.js": "/static/js/main.5bcbcd21.chunk.js",
+    "main.js.map": "/static/js/main.5bcbcd21.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a5108811.js",
     "runtime-main.js.map": "/static/js/runtime-main.a5108811.js.map",
     "static/js/2.279ab702.chunk.js": "/static/js/2.279ab702.chunk.js",
@@ -22,6 +22,7 @@
     "static/media/florence_profile.ca9afabf.jpg": "/static/media/florence_profile.ca9afabf.jpg",
     "static/media/in-the-canyon.d08f1529.jpg": "/static/media/in-the-canyon.d08f1529.jpg",
     "static/media/nyc-scape.449f55de.jpg": "/static/media/nyc-scape.449f55de.jpg",
+    "static/media/palantir_logo.b1a6d1bc.png": "/static/media/palantir_logo.b1a6d1bc.png",
     "static/media/phoenix-logo.daba2437.png": "/static/media/phoenix-logo.daba2437.png",
     "static/media/piano-performance.1e73799a.jpg": "/static/media/piano-performance.1e73799a.jpg",
     "static/media/professional-headshot-website.1ca370f3.jpg": "/static/media/professional-headshot-website.1ca370f3.jpg",
@@ -35,6 +36,6 @@
     "static/js/runtime-main.a5108811.js",
     "static/js/2.279ab702.chunk.js",
     "static/css/main.ac3ad3ec.chunk.css",
-    "static/js/main.a9c1a212.chunk.js"
+    "static/js/main.5bcbcd21.chunk.js"
   ]
 }
