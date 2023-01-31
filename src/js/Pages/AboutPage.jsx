@@ -113,7 +113,7 @@ const AboutPage = ({
             </p>
             <br/>
             <p className="about-me-content">
-              After the endless summer finally ended in September, I started my job as a SWE at Meta (Facebook) in NYC. I learned so much, and met so many cool people in my first few months! Unfortunately, due to Meta’s mass layoffs, (they let go of all new joiners without performance review), I recently lost my job and am now on the hunt for new opportunities. I'm looking at the situation as an opportunity to find a company working on something I'm more excited about!
+              After the endless summer finally ended in September, I started my job as a SWE at Meta (Facebook) in NYC. I learned so much, and met so many cool people in my first few months! Unfortunately, due to Meta’s mass layoffs, (they let go of all new joiners without performance review), I lost my job after a few short months. I've since started a new role as a Forward Deployed SWE at Palantir based in NYC and couldn't be more excited about it. I'm really grateful to have found such an amazing opportunity.
             </p>
           </div>
         }
