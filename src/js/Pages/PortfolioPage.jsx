@@ -106,7 +106,7 @@ const PortfolioPage = ({navMobThresh}) => {
                       forward deployed software engineer <span className="dates">(january 2023 - present)</span>
                     </h2>
                     <p className="experience-description-text">
-                      I just started my new role and am couldn't be more excited about it.
+                      I just started my new role and couldn't be more excited about it.
                     </p>
                     <br/>
                     <p className="experience-description-text">
